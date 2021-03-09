@@ -7,6 +7,6 @@
 <title>GadgetBadget</title>
 </head>
 <body>
-
+	<center><h1>Gadget Badget</h1></center>
 </body>
 </html>
