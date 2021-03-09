@@ -7,7 +7,7 @@
 <title>GadgetBadget</title>
 </head>
 <body>
-	<center><h1>Gadget Badget</h1></center>
+	<center><u><h1>Gadget Badget</h1></u></center>
 	<h2>Welcome</h2>
 </body>
 </html>
