@@ -1,0 +1,350 @@
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: whitesmoke;
+    /* overflow-x: hidden; */
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+.navLogo{
+    width: 60px;
+    height: 70px;
+}
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    font-size: medium;
+    font-weight: bold;
+    font-size: large;
+    font-variant: small-caps;
+    transition: transform .2s;
+    
+}
+
+.topnavScroll {
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    animation-name: laydown;
+    animation-duration: 1s;
+
+}
+@keyframes laydown{
+    from {height: 0px;}
+  to {height: 70px;}
+}
+
+.topnavScroll a{
+    color: black;
+}
+
+.topnavScroll a:hover{
+    color: green;
+}
+
+
+nav a {
+    color: aliceblue;
+}
+
+
+.topnav a:hover {
+    color: rgb(255, 85, 119);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.topnav li .fas{
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+
+}
+
+.topnav li .fas:hover {
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+
+}
+
+
+
+.topnav .dropdown-item:hover {
+    color: rgba(252, 3, 45, 0.87);
+    font-weight: bold;
+    
+
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+
+}
+.slideCardFooter{
+    background-color: white;
+    height: 60px;
+}
+.SeperaterLine {
+    height: 4px;
+    background-color: crimson;
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 60px;
+
+}
+
+.subtopic{
+    color: gray;
+}
+
+.swiper-pagination{
+   color: crimson;
+}
+
+.highlitCard{
+    height:200px;
+}
+
+.viewAllLink{
+    color: crimson;
+    font-weight: bold;
+    text-decoration: none;
+}
+.viewAllLink:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.BannerWrap{
+    position: relative;
+    min-height: 30rem;
+    width: 95%;
+    margin-right: 30px;
+    overflow: hidden;
+    
+}
+
+.MidBanner{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 500px;
+    margin-top: 30px;
+    
+}
+
+.bottom_section{
+    background-image: url(../../img/Solo-Traveller.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: color-dodge;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.isolateAd{
+    position: relative;
+    top: 160px;
+    left: 800px;
+    background-color: #1c2331;
+    width: 1000px;
+    height: 350px;
+    display: none;
+}
+
+.isolateAd_inani {
+    position: relative;
+    top: 160px;
+    left: 800px;
+    background-color: #1c2331;
+    width: 1000px;
+    height: 350px;
+    display: block;
+}
+
+.footertop{
+    
+    height: 80px;
+    background-color: rgb(255, 43, 85);
+    
+}
+
+.SocialBtn{
+    color: white;
+}
+
+.tourcardDist{
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(104, 104, 104);
+    
+}
+
+.tourcardL1{
+    position: relative;
+    font-size: medium;
+    font-weight: 700;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+}
+
+.tourcardL2 {
+    position: relative;
+    font-size: small;
+    font-weight: lighter;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+    
+}
+
+.tourcardReview{
+    color: rgb(0, 79, 153);
+}
+
+.tourPrice{
+    color: rgb(5, 156, 25);
+}
+
+.tourtitle{
+    color: crimson;
+}
+
+.percent{
+    position: relative;
+    color: white;
+    font-size: large;
+    top: -16px;
+    left: -35px;
+
+}
+
+.cardimg{
+    
+    transition: transform .2s;
+}
+
+.cardimg:hover {
+    transform: scale(0.9);
+}
+
+.HomeCommonBtn{
+    background-color: rgb(250, 41, 69);
+    border-radius: 40px;
+    height: 50px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.HomeCommonBtn:hover{
+    background-color: rgba(39, 100, 214, 0.938);
+}
+
+.promoCardAct{
+     position: relative;
+     background-size: 360px 260px;
+     background-repeat: no-repeat;
+     cursor: pointer;
+}
+
+/* .promoCardAct:hover{
+    
+    background-repeat: no-repeat;
+    background-size: 360px 260px;
+    animation: mymove 100s;
+    
+}
+@keyframes mymove {
+    0.5% {
+        background-size: 340px 240px;
+    }
+} */
+
+.promoCardAct:hover{
+    
+    animation: mymove 100s;
+    
+}
+@keyframes mymove {
+    
+    0.75% {
+        transform: scale(1.1);
+    }
+}
+
+.newsHead{
+    color: crimson;
+    text-decoration: none;
+}
