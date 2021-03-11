@@ -24,6 +24,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/HomePage.js"></script>
+    
 </head>
 <body>
 	
@@ -72,6 +73,19 @@
             </ul>
         </div>
     </nav>
+    
+    <header>
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3" style="font-weight: bolder;">Have an Innovative Idea?</h1>
+                    <h3 class="lead mt-3">Start your project. We will back you up.</h3><br>
+                    <button type="button" class="btn btn-success">Start a Campaign</button>
+                </div>
+            </div>
+        </div>
+    </header>
     	
 </body>
 </html>
