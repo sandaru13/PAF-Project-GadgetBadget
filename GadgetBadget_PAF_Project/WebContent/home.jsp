@@ -83,7 +83,7 @@
                 <div class="w-100 text-white">
                     <h1 class="display-3" style="font-weight: bolder;">Have an Innovative Idea?</h1>
                     <h3 class="lead mt-3">Start your project. We will back you up.</h3><br>
-                    <button type="button" class="btn btn-success">Start a Campaign</button>
+                    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innovatorHome.jsp'">Start a Campaign</button>
                 </div>
             </div>
         </div>
@@ -121,18 +121,15 @@
                             <h6 class="h6 pb-1 newsHead"><i class="fas fa-donate pr-1"></i> Fund</h6>
                             <h4 class="h4 mb-4">Fund a Project</h4>
                             <p class="font-weight-normal">Help an Innovator to build their project, by funding them.</p>
-                            <a class="btn btn-success">View Funding Projects</a>
+                            <a class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/fundingProjects.jsp'">View Funding Projects</a>
 
                         </div>
                         <!-- Grid column -->
-
                     </div>
                     <!-- Grid row -->
                 </div>
                 <!-- jumbotron -->
             </div>
-            
-            
            
             <div class="col-md-5">
                 <!-- jumbotron -->
@@ -161,10 +158,8 @@
 
                         </div>
                         <!-- Grid column -->
-
                     </div>
                     <!-- Grid row -->
-
                 </div>
                 <!-- jumbotron -->
             </div>
