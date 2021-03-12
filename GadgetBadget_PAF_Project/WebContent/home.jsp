@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.css">
     
     <!-- js -->
@@ -19,6 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/HomePage.js"></script>
     
 </head>
@@ -86,9 +90,86 @@
     </header>
     <!-- header -->
     
+    <!-- Middle Section -->
     <div class="middleArea" style="overflow-x: hidden;">
     	
+    	<hr class="SeperaterLine">
+        <h2 class="d-flex justify-content-center font-weight-bold">Discover New Projects</h2>
+        <h3 class="d-flex justify-content-center subtopic">Fund a project or Make a request to purchase one</h3>
+    	
+    	<div class="row row-cols-2 justify-content-center mt-4">
+            <div class="col-md-5">
+                <!-- jumbotron -->
+                <div class="jumbotron text-center hoverable p-2 ">
 
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="fund1.jpg" class="img-thumbnail" alt="image of funding">
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+                            
+                            <h6 class="h6 pb-1 newsHead"><i class="fas fa-donate pr-1"></i> Fund</h6>
+                            <h4 class="h4 mb-4">Fund a Project</h4>
+                            <p class="font-weight-normal">Help an Innovator to build their project, by funding them.</p>
+                            <a class="btn btn-success">View Funding Projects</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+                </div>
+                <!-- jumbotron -->
+            </div>
+            
+            
+           
+            <div class="col-md-5">
+                <!-- jumbotron -->
+                <div class="jumbotron text-center hoverable p-2 ">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- image -->
+                            <div class="view overlay">
+                                <img src="purchase1.jpeg" class="img-fluid img-thumbnail" alt="image of purchase order">
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                            <h6 class="h6 pb-1 newsHead"><i class="fas fa-shopping-cart pr-1"></i> Purchase</h6>
+                            <h4 class="h4 mb-4">Purchase a Project</h4>
+                            <p class="font-weight-normal">Make a request to purchase a project, from an Innovator.</p>
+                            <a class="btn btn-success">View Finished Projects</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- jumbotron -->
+            </div>
+		</div>
+	
  		<!-- footer -->
         <footer class="page-footer font-small text-light">
             <!-- Footer Links -->
