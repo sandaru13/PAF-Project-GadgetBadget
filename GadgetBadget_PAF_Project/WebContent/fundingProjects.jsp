@@ -96,6 +96,78 @@
         	<h2 class="d-flex justify-content-center font-weight-bold">Fund a Project</h2>
         	<h3 class="d-flex justify-content-center subtopic">Many more projects are there to explore</h3>
         	
+        	<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			  
+			  	<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			  	
+			  	<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+			<br>
+        	
+        	<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			  
+			  	<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			  	
+			  	<div class="col-lg-4 col-sm-6 col-xs-12">
+			  		<div class="card" style="width: 70%">
+			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
+  						<div class="card-body">
+    						<h5 class="card-title">Project Name</h5>
+    						<p class="card-text">Project Description</p>
+    						<a href="#!" class="btn btn-primary">View Project</a>
+  						</div>
+			    	</div>
+			  	</div>
+			</div>
+			
 		    <!-- footer -->
 	        <footer class="page-footer font-small text-light">
 	            <!-- Footer Links -->
