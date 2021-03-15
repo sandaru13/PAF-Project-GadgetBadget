@@ -35,7 +35,47 @@
 		<img src="innvP1.PNG"/>
 	</center>
 
+      Campain Title
+    <input type="text" class="form-control" name="campTitle" placeholder="yo..." required>
+    </br>
+    Fundraiser Category
+    </br>
+    	<input type="radio" id="AaC" name="catogery" value="AaC">
+		<label for="AaC">Art and Crafting</label><br>
+		<input type="radio" id="gaming" name="catogery" value="gaming">
+		<label for="gaming">Gaming</label><br>
+    </br>
+    The Project is managed by
+    </br>
+        <input type="radio" id="solo" name="manage" value="solo">
+		<label for="solo">By Me</label><br>
+		<input type="radio" id="org" name="manage" value="org">
+		<label for="org">By My Organization</label><br>
+		<input type="radio" id="friends" name="manage" value="friends">
+		<label for="friends">with my friends</label><br>
+	</br>
+	What is your prefer currency
+    </br>
+    	<input type="radio" id="lkr" name="currency" value="lkr">
+		<label for="lkr">LKR</label><br>
+		<input type="radio" id="dollar" name="currency" value="dollar">
+		<label for="dollar">US$</label></br></br>
+		
+	Set minimum amount goal
+	</br>
+	   	<input type="radio" id="mf1" name="minFund" value="mf1">
+		<label for="mf1">1000$</label><br>
+		<input type="radio" id="mf2" name="minFund" value="mf2">
+		<label for="mf2">10000$</label><br>
+		<input type="radio" id="mf3" name="minFund" value="mf3">
+		<label for="mf1">50000$</label><br>
+		<input type="radio" id="mf4" name="minFund" value="mf4">
+		<label for="mf4">100000$</label><br>
+		<input type="radio" id="mf4" name="minFund" value="mf4">
+		<label for="mf4">I'm not sure yet</label></br></br>
     
+    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1">
+    <label for="AgreementP1">Terms and Conditions</label><br>
     
     
 </body>
