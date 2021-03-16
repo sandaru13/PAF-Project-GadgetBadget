@@ -154,7 +154,7 @@
                             <h6 class="h6 pb-1 newsHead"><i class="fas fa-shopping-cart pr-1"></i> Purchase</h6>
                             <h4 class="h4 mb-4">Purchase a Project</h4>
                             <p class="font-weight-normal">Make a request to purchase a project, from an Innovator.</p>
-                            <a class="btn btn-success">View Finished Projects</a>
+                            <a class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/purchaseProjects.jsp'">View Finished Projects</a>
 
                         </div>
                         <!-- Grid column -->
