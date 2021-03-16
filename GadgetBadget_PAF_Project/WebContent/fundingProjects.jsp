@@ -96,7 +96,38 @@
         	<h2 class="d-flex justify-content-center font-weight-bold">Fund a Project</h2>
         	<h3 class="d-flex justify-content-center subtopic">Many more projects are there to explore</h3><br>
         	
-        	<div class="row">
+        	<section class="search-sec">
+    			<div class="container" style="width:1000px; margin:0 auto;">
+        			<form action="#" method="post">
+            			<div class="row">
+                			<div class="col-lg-12">
+                    			<div class="row">
+                        			<div class="col-lg-4 col-sm-6 col-xs-12">
+                            			<input type="text" class="form-control search-slt" placeholder="Enter Project Name" style="height : 60px; width : 300px">
+                        			</div>
+                        			<div class="col-lg-4 col-sm-6 col-xs-12">
+                            			<select class="form-control search-slt" id="Select1" style="height : 60px; width : 300px">
+                                			<option hidden=TRUE>Select Project Category</option>
+                                			<option>Category 1</option>
+                                			<option>Category 2</option>
+                                			<option>Category 3</option>
+                                			<option>Category 4</option>
+                                			<option>Category 5</option>
+                            			</select>
+                        			</div>
+                        			<div class="col-lg-4 col-sm-6 col-xs-12">
+                        				<button type="button" class="btn btn-danger" style="width : 300px"><i class="fas fa-search"></i> Search</button>
+                        			</div>
+                    			</div>
+                			</div>
+            			</div>
+        			</form>
+    			</div>
+			</section>
+			
+			<br>
+        	
+        	<div class="row" style="width:1500px; margin:0 auto;">
 				<div class="col-lg-4 col-sm-6 col-xs-12">
 			  		<div class="card" style="width: 70%">
 			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
@@ -139,7 +170,7 @@
 			
 			<br><br>
         	
-        	<div class="row">
+        	<div class="row" style="width:1500px; margin:0 auto;">
 				<div class="col-lg-4 col-sm-6 col-xs-12">
 			  		<div class="card" style="width: 70%">
 			    		<img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..."/>
