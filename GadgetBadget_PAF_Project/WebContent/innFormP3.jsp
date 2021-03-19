@@ -31,53 +31,13 @@
 </head>
 <body>
 
-	<center>Let's Add some DETAILS about your project ;]</center><br>
+	<center>Finacial Status</center><br>
 	
     <center>
-		<img src="innvP2.PNG"/>
+		<img src="innvP3.PNG"/>
 	</center>
 	
-    Pitch Your project idea with your community
-    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project within 5min" required maxlength="1000">
-    </br>
-    Let's add some pictures 
-    </br>
-    
-    <!-- must implement img input -->
-    
-    Add link to social media pages
-    <input type="text" class="form-control" name="social" placeholder="">
-    </br>
-        
-    Offers to backers as rewards
-    <input type="radio" id="offersType1" name="offersType" value="offersType1">
-	<label for="offersType1">10%</label><br> 
-	<input type="radio" id="offersType2" name="offersType" value="offersType2">
-	<label for="offersType2">20%</label><br>
-	<input type="radio" id="nooffersType" name="offersType" value="nooffersType2">
-	<label for="nooffersType2">I'm not sure yet</label><br>  
-	</br>
-		
-	Donation Type
-	</br>
-	<input type="radio" id="dt1" name="donaType" value="dt1">
-	<label for="dt1">Minimum</label><br>
-	<input type="radio" id="dt2" name="donaType" value="dt2">
-	<label for="dt2">Maximum</label><br>
-	<input type="radio" id="dt3" name="donaType" value="dt3">
-	<label for="dt3">Any</label><br>
-		
-    Create own unique perks  
-    <input type="text" class="form-control" name="perks" placeholder="">
-    
-    <input type="radio" id="perk1" name="perks" value="perk1">
-	<label for="perk1">I'll do it later</label><br>
-	<input type="radio" id="perk2" name="perks" value="perk2">
-	<label for="perk2">I don't think so</label><br>
-	
-	
-	Deadline 
-	<input type="date" class="form-control" name="deadline">
+ 
 	
 	
 	
