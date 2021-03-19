@@ -64,7 +64,7 @@
 	                </li>
 	
 	                <li class="nav-item active ml-4 row">
-	                    <a class="nav-link" href="#" title="Sign Up"><i class="fas fa-user fa-1x"></i>  Sign Up</a>
+	                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/SignUp.jsp" title="Sign Up"><i class="fas fa-user fa-1x"></i>  Sign Up</a>
 	                </li>
 	
 	                <li class="nav-item active ml-4 mr-2 row">

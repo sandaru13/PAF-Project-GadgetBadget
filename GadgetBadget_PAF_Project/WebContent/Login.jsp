@@ -48,17 +48,17 @@
                     	</div> 
 
                         <div class="to_flip d-flex justify-content-center align-items-center" id="toflipbtn" style="padding: 20px;position: relative; left: 60px;">
-                            <a style="color: white;" href="#">SIGN UP</a>
+                            <a style="color: white;" href="http://localhost:8080/GadgetBadget_PAF_Project/SignUp.jsp">SIGN UP</a>
                         </div>
                         -->  
                     </div>                   
                     
                     <div class="col-6 loginRight" style="background-color: whitesmoke;">
-                        <form class="text-center p-3" id="logfrm" action="vertifyLogin" method="POST">
+                        <form class="text-center p-3" id="logfrm" action="#" method="POST">
                             <h1 class="h1 mb-0 d-flex flex-row mt-5">Sign In</h1><br>
                             <div class="row ml-1 mb-3">
                                 <small class="mt-0 text-muted mb-4">Don't have an account ? </small>
-                                <a style="font-size: smaller; font-weight: bold; color: blue;">Create an account..</a>
+                                <a href="http://localhost:8080/GadgetBadget_PAF_Project/SignUp.jsp" style="font-size: smaller; font-weight: bold; color: blue;">Create an account..</a>
                             </div>
 
                             <!-- E-mail -->
