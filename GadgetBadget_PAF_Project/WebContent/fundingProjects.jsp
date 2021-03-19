@@ -37,7 +37,7 @@
 	        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
 	            <ul class="navbar-nav">
 	                <li class="nav-item active ml-2 mr-1">
-	                    <a class="nav-link" href="#">Home </a>
+	                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/home.jsp">Home </a>
 	                </li>
 	                <li class="nav-item active ml-2 mr-1">
 	                    <a class="nav-link" href="#">Section 1</a>
@@ -69,7 +69,7 @@
 	                </li>
 	
 	                <li class="nav-item active ml-4 mr-2 row">
-	                    <a class="nav-link" href="#" title="Login"><i class="fas fa-sign-in-alt fa-1x"></i>  Login</a>
+	                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/Login.jsp" title="Login"><i class="fas fa-sign-in-alt fa-1x"></i>  Login</a>
 	                </li>
 	            </ul>
 	        </div>

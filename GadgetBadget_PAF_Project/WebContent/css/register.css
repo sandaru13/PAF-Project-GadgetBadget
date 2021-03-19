@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(https://mdbootstrap.com/img/new/fluid/nature/004.jpg); 
+}
+
+.Fulscreen_slide{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: backchanger 25s linear infinite;
+    background-size: cover;
+}
+
+.inner_layer{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);    
+}
+
+.signlogo{
+    width: 100px;
+    height: 100px;
+}
+
+#flipJumbo{
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px #000000;
+}
+
+
+.front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: visible;
+    background-color: white;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+}
+
+.to_flip{
+    border-style: solid;
+    border-color: white;
+    background-color: transparent;
+    border-radius: 100px;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.to_flip:hover{
+    box-shadow: 0 4px 8px 0 rgba(250, 249, 249, 0.2),
+    0 6px 20px 0 rgba(247, 247, 247, 0.19);
+}
+
+.sign_UpIn_btn{
+	background-color: rgb(255, 72, 109);
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.loginLeft{
+    background-image: url(../login.gif);
+    background-size: cover;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
