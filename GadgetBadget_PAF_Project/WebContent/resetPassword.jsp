@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-
+	
 	<link rel="icon" type="image/gif/png" href="logo.png">
 	<title>GadgetBadget</title>
 
@@ -25,39 +25,31 @@
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+	
 </head>
 <body>
 
 	<div class="Fulscreen_slide">
         <div class="container-fluid p-0 m-0 inner_layer d-flex justify-content-center align-items-center">
-                <div class="jumbotron d-flex justify-content-center align-items-center p-0 col-6 h-75" id="flipJumbo">
-                    <div class="front row">
+            <div class="jumbotron d-flex justify-content-center align-items-center p-0 col-6 h-75" id="flipJumbo">
+                <div class="front row">
 
-                        <div class="col-6 signupLeft1" >
-                        </div>
+                    <div class="col-6 resetLeft">
+                    </div>
 
-                        <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-                        
-                            <form class="text-center p-3" action="#" method="GET">
+                    <div class="col-6 d-flex flex-column justify-content-center align-items-center">     
+                    	<div class="container">  
+                            <h1 class="h1 mb-0 d-flex flex-row">Reset</h1>
+                            <h1 class="h1 mb-3 d-flex flex-row">Your Password</h1><br>
+                            <small class="mt-3 text-muted mb-4">Temporary Password has been sent to your Email Address. Use that when you Login again. You can setup your new password once you Logged in.</small><br><br>
 
-                                <h1 class="h1 mb-0 d-flex flex-row">Forgot</h1>
-                                <h1 class="h1 mb-3 d-flex flex-row">Your Password ?</h1>
-                                <small class="mt-3 text-muted mb-4">A computer lets you make more mistakes faster than any invention in human history, with the possible exceptions of handguns and tequila - Mitch Ratliff</small>
-
-                                <!-- E-mail -->
-                                <input type="email" id="forgetPwEmail" class="form-control mt-5" placeholder="E-mail" name="forgetPwEmail">
-                                    <small class="mt-3 text-muted mb-4">Use the Email, You used to register to the system</small>
-
-                                    <div class="d-flex justify-content-end">
-                                        <button class="btn ForgotPwNxtBtn mt-5" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/resetPassword.jsp'">NEXT</button>
-                                    </div>
-                                
-                           </form>
-                            
-                        </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn ForgotPwNxtBtn mt-4" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/Login.jsp'">SIGN IN</button>
+                            </div>
+                    	</div>        
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
