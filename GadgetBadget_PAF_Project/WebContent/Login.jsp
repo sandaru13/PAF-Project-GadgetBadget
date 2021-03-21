@@ -68,7 +68,7 @@
                             <input type="password" id="loginPw" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required name="loginPw">
 
                             <div class="row mt-3 ml-1 mr-2 d-flex justify-content-between align-items-end mb-4" id="remrow">                                
-                                <a style="font-size: smaller; font-weight: bold;" href="forgetpassword"> Forgot Password?</a>
+                                <a style="font-size: smaller; font-weight: bold;" href="http://localhost:8080/GadgetBadget_PAF_Project/forgotPassword.jsp"> Forgot Password?</a>
                             </div>
 
                             <button class="btn my-4 btn-block sign_UpIn_btn" type="submit" id="signinsumbit">Sign In</button>
