@@ -31,10 +31,10 @@
 </head>
 <body>
 	
-	<center>Let's Add some DETAILS about your project ;]</center><br>
+	<center><h4>Let's Add some DETAILS about your project ;]</h4></center><br>
 	
     <center>
-		<img src="innvP2.PNG"/>
+		<img src="innvP2.png"/>
 	</center>
 	
 	<form>

@@ -31,10 +31,10 @@
 </head>
 <body>
 
-	<center>Finacial Status</center><br>
+	<center><h4>Finacial Status</h4></center><br>
 	
     <center>
-		<img src="innvP3.PNG"/>
+		<img src="innvP3.png"/>
 	</center>
 	<form>
 	 	Nationality
