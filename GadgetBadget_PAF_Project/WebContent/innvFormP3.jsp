@@ -36,25 +36,25 @@
     <center>
 		<img src="innvP3.PNG"/>
 	</center>
-	
- 	Nationality
-    <input type="text" class="form-control" name="nationality" placeholder=""><br>
-	
-	NIC number
-	<input type="text" class="form-control" name="getNIC" placeholder=""><br>
-	
-	Photo of NIC
-	<input type="file" class="form-control" src="" name="photoNIC" accept = "image/*"><br>
-	
-	Provide your bank account number
-	<input type="text" class="form-control" name="bankNumber" placeholder=""><br>
-	
-	Contact Number
-	<input type="text" class="form-control" name="contackNumber" placeholder=""><br>
-	
-	
-	<button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
-	
+	<form>
+	 	Nationality
+	    <input type="text" class="form-control" name="nationality" placeholder=""><br>
+		
+		NIC number
+		<input type="text" class="form-control" name="getNIC" placeholder=""><br>
+		
+		Photo of NIC
+		<input type="file" class="form-control" src="" name="photoNIC" accept = "image/*"><br>
+		
+		Provide your bank account number
+		<input type="text" class="form-control" name="bankNumber" placeholder=""><br>
+		
+		Contact Number
+		<input type="text" class="form-control" name="contackNumber" placeholder=""><br>
+		
+		
+		<button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
+	</form>
     
 </body>
 </html>
