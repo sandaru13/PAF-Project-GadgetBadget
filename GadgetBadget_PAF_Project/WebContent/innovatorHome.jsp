@@ -142,7 +142,7 @@
 	     <br><br>
 	     
 	     <div class="text-center">   
-	     <button type="button" class="btn btn-outline-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP1.jsp'">Let's begin a Campaign</button>
+	     <button type="button" class="btn btn-outline-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvForm.jsp'">Let's begin a Campaign</button>
 	     </div>
 	     <br><br>
 	     
