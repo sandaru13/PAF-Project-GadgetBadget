@@ -40,17 +40,14 @@
 	                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/home.jsp">Home </a>
 	                </li>
 	                <li class="nav-item active ml-2 mr-1">
-	                    <a class="nav-link" href="#">Section 1</a>
-	                </li>
-	                <li class="nav-item active ml-2 mr-1">
-	                    <a class="nav-link" href="#">Section 2</a>
-	                </li>
-	                <li class="nav-item active ml-2 mr-1">
-	                    <a class="nav-link" href="#">Section 3</a>
-	                </li>
-	                <li class="nav-item active ml-2 mr-1">
-	                    <a class="nav-link" href="#">Section 4</a>
-	                </li>
+                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/innovatorHome.jsp">Start a Project</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/fundingProjects.jsp">Fund a Project</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="http://localhost:8080/GadgetBadget_PAF_Project/purchaseProjects.jsp">Buy a Project</a>
+                </li>
 	
 	                <li class="nav-item dropdown active ml-2 mr-1">
 	                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
