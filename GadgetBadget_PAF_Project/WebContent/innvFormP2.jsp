@@ -115,7 +115,7 @@
 						Deadline 
 						<input type="date" class="form-control" name="deadline"><br>
 						
-						<button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
+						<button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP3.jsp'">Proceed to next page</button>
 				    
 				    </form>
 				  </div>

@@ -31,6 +31,8 @@
 </head>
 <body>
 	<div class="container" style="background-color:#E0F7FA;">
+	<br><br>
+			<center><h3>Let's have a Base Idea about the Project :)</h3></center><br>
 	    <center>
 			<img src="innvP1.PNG"/>
 		</center><br><br>
@@ -85,7 +87,7 @@
 					    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
 					    
-					    <button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
+					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button>
 					  </form>
 					</div>
 				</div>

@@ -31,17 +31,33 @@
 </head>
 <body>
 	
-	<center><h4>Let's look at a Preview</h4></center><br>
-	
-    <center>
-		<img src="innvP4.png"/>
-	</center>
-	
-	<form>
-	
-	
-    
-    </form>
+	<div class="container" style="background-color:#E0F7FA;">
+		<center><h3>Let's look at a Preview</h3></center>
+		<center><h4>Feel Free to change the details if something went wrong</h4></center><br>
+		
+		
+	    <center>
+			<img src="innvP4.png"/>
+		</center>
+		<br><br>
+		
+		
+		<div class="row" style="width:1500px; margin:0 auto;">
+				<div class="col-lg-4">
+					  <div class="card" style="width:500px;margin-left:270px;" >
+					
+						<form style="margin:30px 30px 30px 30px;">
+						
+							<h5>Display a preview(Must Implement)</h5>
+			
+							<center><button type="button" class="btn btn-success" onclick="">POST your Campaign</button></center>
+	    
+	   					 </form>
+	   				  </div>
+	   			</div>
+	   	</div>
+   			<br><br><br>
+   	</div>
     
 </body>
 </html>
