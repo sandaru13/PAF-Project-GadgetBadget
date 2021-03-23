@@ -1,0 +1,118 @@
+.bodys {
+  background-image: url("images/p2.jpg");
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  padding: 0px;
+  margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+h3{
+  font-size: 30px;
+}
+
+
+.col_1{
+flex: 50%;
+  flex:50%;
+}
+
+.col_3 {
+flex: 75%;
+  flex: 75%;
+}
+
+.col_1{
+  padding: 0 28px;
+}
+.col_2{
+  padding: 0 16px;
+}
+.col_3{
+  padding: 0 16px;
+}
+
+.all {
+  background-color: #f2f2f2;
+  padding: 50px 20px 50px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-left:250px;
+  margin-right: 250px;
+
+}
+
+select{
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+
+}
+
+input[type=text],input[type=email] {
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 0px;
+  display: block;
+  padding: 10PX;
+}
+
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  margin:20px 0;
+  border: none;
+  width: 30%;
+  border-radius: 30px;
+  font-size: 17px;
+  margin-left: 320px;
+
+}
+input[type=checkbox]{
+  margin-left: 330px;
+}
+
+.btn:hover {
+  background: grey;
+     color: black;
+}
+
+
+hr {
+  border: 1px solid lightgrey;
+}
