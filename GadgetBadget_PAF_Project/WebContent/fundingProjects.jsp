@@ -223,10 +223,8 @@
 	                        <!-- Content -->
 	                        <h6 class="text-uppercase font-weight-bold">Gadget Badget</h6>
 	                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-	                        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-	                            amet,
-	                            consectetur
-	                            adipisicing elit.</p>
+	                        <p>Gadget Badget is an online crowdfunding platform that helps innovators by interconnecting innovators with funding bodies.
+                               Also the platform offers the opportunity to sell the projects of the innovators by interconnecting them with buyers.</p>
 	
 	                    </div>
 	                    <!-- Grid column -->
