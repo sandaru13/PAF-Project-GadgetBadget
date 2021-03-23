@@ -1,0 +1,165 @@
+body {
+ 	background-color: rgb(240, 240, 240);
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.box,
+.regbox{
+    width: 400px;
+    height: 480px;
+    background: #ffff;
+    margin: 0;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    color: #400040;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.avatar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    top: -22%;
+    position: absolute;
+    left: calc(50% - 75px);
+    border-radius: 50%;
+}
+
+.box h2{
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Gill Sans", sans-serif;
+}
+.box label{
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    color: #6b6b6b;
+    font-family: "Gill Sans", sans-serif;
+}
+.box p{
+    margin: 0;
+    padding: 5px;
+    font-style: italic;
+    color: #6f6f6f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.box input {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.box input[type="text"]{
+    border: 2px;
+    background: #fff;
+    border-bottom: 1px solid #c0c0c0;
+    outline: 0;
+    height: 35px;
+    color: #0000;
+    font-size: 15px;
+}
+
+.box input[type="submit"] {
+    display: block;
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #eccc68;
+    color: #000;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.box input[type="submit"]:hover {
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #ff6348;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+.regbox .avatar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    top: -19%;
+    position: absolute;
+    left: calc(50% - 75px);
+    border-radius: 50%;
+}
+
+.regbox h2 {
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.regbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.regbox input {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.regbox input[type=text]{
+  width: 100%;
+  padding: 20px 35px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+.regbox input[type="submit"] {
+    display: block;
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #eccc68;
+    color: #000;
+    font-size: 15px;
+    border-radius: 20px;
+}
+.regbox input[type="submit"]:hover {
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #ff6348;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
