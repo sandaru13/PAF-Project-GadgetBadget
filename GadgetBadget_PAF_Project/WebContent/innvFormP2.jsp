@@ -31,60 +31,105 @@
 </head>
 <body>
 	
-	<center><h4>Let's Add some DETAILS about your project ;]</h4></center><br>
-	
-    <center>
-		<img src="innvP2.png"/>
-	</center>
-	
-	<form>
-	
-	    Pitch Your project idea with your community
-	    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project within 5min" required maxlength="1000">
-	    <br>
-	    Let's add some pictures 
-	    <input type="file" class="form-control" src="" name="projectPic" accept = "image/*">
-	    <br>
-	    
-	    <!-- must implement img input -->
-	    
-	    Add link to social media pages
-	    <input type="text" class="form-control" name="social" placeholder="">
-	    <br>
-	        
-	    Offers to backers as rewards<br>
-	    <input type="radio" id="offersType1" name="offersType" value="offersType1">
-		<label for="offersType1">10%</label><br> 
-		<input type="radio" id="offersType2" name="offersType" value="offersType2">
-		<label for="offersType2">20%</label><br>
-		<input type="radio" id="offersType3" name="offersType" value="offersType3">
-		<label for="offersType3">30%</label><br>
-		<input type="radio" id="nooffersType" name="offersType" value="nooffersType2">
-		<label for="nooffersType2">I'm not sure yet</label><br><br>  
-		
-		Donation Type
-		<br>
-		<input type="radio" id="dt1" name="donaType" value="dt1">
-		<label for="dt1">Minimum</label><br>
-		<input type="radio" id="dt2" name="donaType" value="dt2">
-		<label for="dt2">Maximum</label><br>
-		<input type="radio" id="dt3" name="donaType" value="dt3">
-		<label for="dt3">Any</label><br><br>
+	<div class="container" style="background-color:#E0F7FA;">
+			<br><br>
+			<center><h4>Let's Add some DETAILS about your project ;]</h4></center><br>
 			
-	    Create own unique perks  
-	    <input type="text" class="form-control" name="perks" placeholder="">
-	    
-	    <input type="radio" id="perk1" name="perks" value="perk1">
-		<label for="perk1">I'll do it later</label><br>
-		<input type="radio" id="perk2" name="perks" value="perk2">
-		<label for="perk2">I don't think so</label><br><br>
-		
-		Deadline 
-		<input type="date" class="form-control" name="deadline">
-		
-		<button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
-    
-    </form>
+		    <center>
+				<img src="innvP2.png"/>
+			</center>
+				
+			  <div class="row" style="width:1500px; margin:0 auto;">
+			    	<div class="col-lg-4">
+				  		<div class="card" style="width:500px;margin-left:270px;margin-top:40px" >
+				  		
+				  		<form style="margin:30px 30px 30px 30px;">
+				  							
+					    Pitch Your project idea with your community
+					    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project within 5min" required maxlength="1000" style="height:80px;">
+					    <br>
+					    Let's add some pictures 
+					    <input type="file" class="form-control" src="" name="projectPic" accept = "image/*">
+					    <br>
+					    
+					    <!-- must implement img input -->
+					    
+					    Add link to social media pages
+					    <input type="text" class="form-control" name="social" placeholder="">
+					    <br>
+					        
+					    Offers to backers as rewards<br>
+					    <div class=container>
+							<div class="row" style="margin-top:10px;">
+						
+								<div class="col" style="margin-left:-10px;">
+									<input type="button" class="btn btn-outline-success" value="Custom Reward" onclick="ShowHideDiv(this)" >					
+								</div>
+																			
+								<div class="col">
+									<input type="button" value="I don't think so" onclick="ShowHideDiv(this)" class="btn btn-outline-warning">								
+								</div>
+								
+							</div>
+						</div>
+						<br>
+						
+						<div class=container>
+							<div class="row">	
+								<div id="dvReward" style="display: none">
+								    Offer Percentage:
+								    <input type="text" id="inReward" class="form-control">							    
+								</div>
+							</div>
+						</div>		
+						
+						<br>
+						Donation Type
+						<br>
+						<div class=container>
+							<div class="row" style="margin-top:10px;">
+								<div class="col">
+									<input type="radio" id="dt1" name="donaType" value="dt1">
+									<label for="dt1">Minimum</label><br>
+								</div>
+								<div class="col">
+									<input type="radio" id="dt2" name="donaType" value="dt2">
+									<label for="dt2">Maximum</label><br>
+								</div>
+								<div class="col">
+									<input type="radio" id="dt3" name="donaType" value="dt3">
+									<label for="dt3">Any</label>
+								</div>
+							</div>
+						</div>
+						<br>
+							
+					    Create own unique perks  
+					    <input type="text" class="form-control" name="perks" placeholder="">
+					    
+					    <input type="radio" id="perk1" name="perks" value="perk1">
+						<label for="perk1">I'll do it later</label><br>
+						<input type="radio" id="perk2" name="perks" value="perk2">
+						<label for="perk2">I don't think so</label><br><br>
+						
+						Deadline 
+						<input type="date" class="form-control" name="deadline"><br>
+						
+						<button type="button" class="btn btn-success" onclick="">Proceed to next page</button>
+				    
+				    </form>
+				  </div>
+				</div>
+			</div>
+				
+		</div>
+				<script type="text/javascript">
+				    function ShowHideDiv(btnRew) {
+				        var dvReward = document.getElementById("dvReward");
+				        dvReward.style.display = btnRew.value == "Custom Reward" ? "block" : "none";
+				    }
+				</script>
+				
     
 </body>
 </html>
