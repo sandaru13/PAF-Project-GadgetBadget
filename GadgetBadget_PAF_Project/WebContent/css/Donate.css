@@ -49,9 +49,10 @@ body {
 .box label{
     margin: 0;
     padding: 5px;
-    font-weight: bold;
+    font-style: italic;
     color: #6b6b6b;
     font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
 }
 .box p{
     margin: 0;

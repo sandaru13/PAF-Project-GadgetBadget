@@ -1,3 +1,6 @@
+
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -13,7 +16,7 @@
 	    
 	    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 	    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	    <link rel="stylesheet" href="css/donate.css">
+	    <link rel="stylesheet" href="css/Donate.css">
        
     </head>
     <body>
@@ -22,11 +25,9 @@
                 <img class="avatar" src="images/donateImg.jpg"><br>
                 <h2>Donate This Project</h2>
 				<form action="RegisterServlet" method="post"><br>
-                   	<label for="contribution">Make a contribution</label><br>
+                   	<label for="contribution">The best way to predict the future is to create it.</label><br>
 					<input type="text" id="usd" placeholder="USD" name="amount" required><br><br>
-                 	<input type="submit" value="CONTINUE">
-                 	<p>Contributions are not associated with perks</p>
-                
+                 	<input type="submit" value="NEXT">
                 </form>
 			</div>
 		</div>
