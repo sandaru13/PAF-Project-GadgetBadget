@@ -133,7 +133,7 @@
     						<div class="progress">
   								<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%</div>
 							</div><br>
-    						<a href="#!" class="btn btn-info">View Project</a>
+    						<a href="http://localhost:8080/GadgetBadget_PAF_Project/donateInnovs.jsp" class="btn btn-info">View Project</a>
   						</div>
 			    	</div>
 			  	</div>

@@ -108,15 +108,10 @@ nav a {
 
 }
 
-
-
 .topnav .dropdown-item:hover {
     color: rgba(252, 3, 45, 0.87);
     font-weight: bold;
-    
-
 }
-
 
 .swiper-container {
     width: 100%;
@@ -133,17 +128,18 @@ nav a {
     height: 400px;
 
 }
+
 .slideCardFooter{
     background-color: white;
     height: 60px;
 }
+
 .SeperaterLine {
     height: 4px;
     background-color: crimson;
     width: 80px;
     border-radius: 5px;
     margin-top: 60px;
-
 }
 
 .subtopic{
@@ -163,6 +159,7 @@ nav a {
     font-weight: bold;
     text-decoration: none;
 }
+
 .viewAllLink:hover{
     color: black;
     text-decoration: none;
@@ -173,8 +170,7 @@ nav a {
     min-height: 30rem;
     width: 95%;
     margin-right: 30px;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 
 .MidBanner{
@@ -183,12 +179,11 @@ nav a {
     min-height: 100%;
     width: auto;
     height: 500px;
-    margin-top: 30px;
-    
+    margin-top: 30px;    
 }
 
 .bottom_section{
-    background-image: url(../../img/Solo-Traveller.jpg);
+    background-image: url(../fund1.jpg);
     background-repeat: no-repeat;
     background-blend-mode: color-dodge;
     background-size: cover;
@@ -221,8 +216,7 @@ nav a {
 .footertop{
     
     height: 80px;
-    background-color: rgb(255, 43, 85);
-    
+    background-color: rgb(255, 43, 85);    
 }
 
 .SocialBtn{
@@ -232,8 +226,7 @@ nav a {
 .tourcardDist{
     font-size: medium;
     font-weight: 500;
-    color: rgb(104, 104, 104);
-    
+    color: rgb(104, 104, 104);    
 }
 
 .tourcardL1{
@@ -251,8 +244,7 @@ nav a {
     font-weight: lighter;
     color: rgb(104, 104, 104);
     top: -9px;
-    left: 8px;
-    
+    left: 8px;    
 }
 
 .tourcardReview{
@@ -276,8 +268,7 @@ nav a {
 
 }
 
-.cardimg{
-    
+.cardimg{   
     transition: transform .2s;
 }
 
@@ -304,26 +295,11 @@ nav a {
      cursor: pointer;
 }
 
-/* .promoCardAct:hover{
-    
-    background-repeat: no-repeat;
-    background-size: 360px 260px;
-    animation: mymove 100s;
-    
-}
-@keyframes mymove {
-    0.5% {
-        background-size: 340px 240px;
-    }
-} */
-
 .promoCardAct:hover{
-    
     animation: mymove 100s;
     
 }
-@keyframes mymove {
-    
+@keyframes mymove {    
     0.75% {
         transform: scale(1.1);
     }

@@ -160,7 +160,7 @@
                 </div>
                 <!-- jumbotron -->
             </div>
-		</div>
+		</div>	
 	
  		<!-- footer -->
         <footer class="page-footer font-small text-light">
