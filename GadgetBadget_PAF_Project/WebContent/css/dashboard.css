@@ -1,0 +1,109 @@
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.pageContent{
+    overflow-x: hidden;
+    background-color: rgb(236, 236, 236);
+}
+
+.sidebar{
+    position: fixed;
+    width: 254px;
+    left: 0px;
+    background-color: wheat;
+}
+
+.sideback{
+    background-color:rgba(255, 68, 68, 0.9);
+    height: 100%;
+}
+
+.sidebarTop{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+}
+
+nav{
+    border: none;
+}
+
+nav ul{
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    list-style: none;
+}
+
+nav ul li{
+    line-height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+nav ul li a {
+    position: relative;
+    color:  white;
+    padding-left: 30px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border-left: 2px solid transparent;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}    
+
+nav ul ul{ 
+    position: static;
+    display: none;
+}
+
+nav ul .dropContAccounts.show {
+    display: block;
+}
+
+nav ul .dropContProjects.show {
+    display: block;
+}
+
+nav ul .dropContPayments.show {
+    display: block;
+}
+
+nav ul ul li{
+    line-height: 40px;
+    border-bottom: none;
+}
+
+nav ul ul li a{
+    font-size: 16px;
+    color: white;
+    padding-left: 60px;
+}
+
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s ;
+}
+
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
