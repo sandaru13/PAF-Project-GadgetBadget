@@ -79,6 +79,53 @@
             </div>
             <!--End of SlideBar-->
             
+            <div class="col-10 pl-0 pr-0 m-0 contentArea" style="width: 100%; position: relative; left: -2px;">
+
+                <nav class="navbar-expand-lg  pl-4 p-0 d-flex justify-content-between" style="background-color: rgba(250, 68, 68 , 0.9); height: 70px;">
+                    
+                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;" ><i class="fas fa-chart-pie mr-3"></i>DASHBOARD</h1>
+                    
+                    <div class="mr-5">                      
+                        <ul class="navbar-nav ml-auto nav-flex-icons">
+                            <li class="nav-item mt-1">
+                                <a class="nav-link waves-effect waves-light">
+                                   <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item mt-1">
+                                <a class="nav-link waves-effect waves-light">
+                                   <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">                            
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                    
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img(32).jpg" class="img-fluid z-depth-1 rounded-circle" alt="Admin Profile" style="width: 50px; height: 50px;">
+                                </a>
+                                
+                                <div class="dropdown-menu dropdown-menu-right dropdown-default p-0" aria-labelledby="navbarDropdownMenuLink-333" style="width: 300px;">
+                                    <div class="aqua-gradient d-flex flex-row" style="height: auto;">
+                                    
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(32).jpg"
+                                            class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
+                                            style="width: 70px; height: 70px;">
+
+                                            <div class="d-flex flex-column">
+                                                <p class="m-0 p-0">System Admin</p>
+                                            </div>
+                                    </div>
+                                    
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i class="fas fa-sign-out-alt mr-3"></i>Log Out</a>
+                                </div>
+                                                                
+                            </li>
+                        </ul>                                                       
+                    </div>
+                </nav>
+                
+                
+                
+        	</div>    
     	</div>        
 	</div>
 	

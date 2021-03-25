@@ -14,6 +14,8 @@ html {
     width: 254px;
     left: 0px;
     background-color: wheat;
+	height: 100%;
+    padding: 0px;
 }
 
 .sideback{
