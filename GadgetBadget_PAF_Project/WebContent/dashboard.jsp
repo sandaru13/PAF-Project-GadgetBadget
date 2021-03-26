@@ -123,6 +123,20 @@
                     </div>
                 </nav>
                 
+                <div class="row p-2 m-4 d-flex flex-row justify-content-between ">
+                	<div class="col-5 overflow-auto white mr-4 d-flex flex-column justify-content-center align-items-center" style="background-image: url(animatedback.gif);"><br>
+						
+                        <i class="fas fa-file-alt fa-7x" style="color: rgb(252, 203, 43);"></i>
+                        <h1 class="font-weight-bold mt-3">312</h1>
+                        <h4 class="mt-3 ml-3 mb-4 font-weight-bold text-muted">Ongoing Campaigns on the Site</h4>
+                        <div class="row w-100" style="height: 6px;" style="color: chocolate; background-color: chocolate; ">
+                            <div class="col-2" style="background-color: rgb(23, 95, 228); border-radius: 15px;"></div>
+                            <div class="col-4" style="background-color: rgb(221, 170, 4); border-radius: 15px;"></div>
+                            <div class="col-6" style="background-color: rgb(253, 215, 0); border-radius: 15px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- footer -->
 		        <footer class="page-footer font-small text-light">
 		            <!-- Footer Links -->
