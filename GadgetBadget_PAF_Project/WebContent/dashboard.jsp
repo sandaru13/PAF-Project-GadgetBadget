@@ -46,6 +46,48 @@
 	                }]
 	            }
 	        });
+	        
+	        var ctx3 = document.getElementById('accountChart');
+	        var myChart = new Chart(ctx3, {
+	            type: 'bar',
+	            data: {
+	                labels: ['Innovators', 'Buyers'],
+	                datasets: [{
+	                    label: 'No of Accounts',
+	                    data: [237, 68],
+	                    backgroundColor: [
+	                        'rgba(48, 79, 254, 1)',
+	                        'rgba(48, 79, 254, 1)'
+	                    ],
+	                    borderColor: [
+	                        'rgba(48, 79, 254, 1)',
+	                        'rgba(48, 79, 254, 1)'
+	                    ],
+	                    borderWidth: 0
+	                }]
+	            },
+	            options: {
+	                scales: {
+	                    yAxes: [{
+	                        gridLines: {
+	                            display: false,
+	                        },
+	                        ticks: {
+	                            beginAtZero: true,
+	                        }
+	                    }],
+	                    xAxes: [{
+	                        gridLines: {
+	                            display: false,
+	                        },
+	                        ticks: {
+	                            beginAtZero: true,
+
+	                        }
+	                    }]
+	                }
+	            }
+	        });
 	    });
 	</script>
     <script src="js/Dashboard.js"></script>
@@ -162,11 +204,47 @@
                     </div>
                 </div>
                 
+                <hr class="mt-4 mb-2" style="background-color: crimson; height: 3px; width: 100%;">
+
+                <div class="row ml-4 d-flex justify-content-between" style="width: 100%;">
+	                <div class="d-flex flex-row mt-4 mr-4">
+	                    <i class="fas fa-user d-flex align-self-center fa-3x mr-2" style="color: rgb(255, 174, 0);"></i>
+	                    <div class="d-flex flex-column">
+	                        <p class="mb-0 text-muted">Total Accounts</p>
+	                        <h2 class="mt-0"># of accounts</h2>
+	                    </div>
+	                </div>
+	
+	                <div class="d-flex flex-row mt-4 mr-4">
+	                    <i class="fas fa-campground d-flex align-self-center fa-3x mr-2" style="color: rgb(6, 145, 209);"></i>
+	                    <div class="d-flex flex-column">
+	                        <p class="mb-0 text-muted">Total Campaigns</p>
+	                        <h2 class="mt-0"># of campaigns</h2>
+	                    </div>
+	                </div>
+	
+	                <div class="d-flex flex-row mt-4 mr-4">
+	                    <i class="fas fa-donate d-flex align-self-center fa-3x mr-2" style="color: rgb(1, 59, 126);"></i>
+	                    <div class="d-flex flex-column">
+	                        <p class="mb-0 text-muted">Total Donations</p>
+	                        <h2 class="mt-0">sum of donations</h2>
+	                    </div>
+	                </div>
+	
+	                <div class="d-flex flex-row mt-4 mr-4">
+	                    <i class="fas fa-dollar-sign d-flex align-self-center fa-3x mr-2" style="color: rgb(123, 26, 187);"></i>
+	                    <div class="d-flex flex-column">
+	                        <p class="mb-0 text-muted">Total Purchases</p>
+	                        <h2 class="mt-0">sum of purchases</h2>
+	                    </div>
+	                </div>
+	            </div>
+                
                 <div class="row p-2 m-4 ">
 	                <div class="col-7 m-4 white">
 	                	<div class="row d-flex flex-column">
 	                    	<h2 class="mt-3 ml-3 mb-0 font-weight-bold">Campaigns</h2>
-	                        <p class="mt-0 ml-3 mb-4 text-muted">Overview Of Latest Week</p>
+	                        <p class="mt-0 ml-3 mb-4 text-muted">Current campaigns on the site</p>
 	                    </div>
 		                <div class="row d-flex flex-row">
 		                	<canvas class="mb-4  col-6" id="pieChart" width="100%" height="80%"></canvas>
@@ -175,18 +253,28 @@
 		                        <p class="mt-0 ml-3 mb-4 text-muted">Finished Campaigns</p>
 		                        <ul class="mt-2">
 		                        	<li class="d-flex justify-content-between mt-4 mb-4">
-		                                <p><i class="fas fa-circle mr-2" style="color: rgba(255, 99, 132, 1);"></i>Finished Campaigns</p>
+		                                <p><i class="fas fa-circle mr-2" style="color: rgba(255, 99, 132, 1);"></i>Finished Campaigns :</p>
 		                                <p>60%</p>
 		                            </li>
 		                            <li class="d-flex justify-content-between mt-4 mb-4">
-		                                <p><i class="fas fa-circle mr-2" style="color: rgba(54, 162, 235, 1);"></i>Ongoing Campaigns</p>
+		                                <p><i class="fas fa-circle mr-2" style="color: rgba(54, 162, 235, 1);"></i>Ongoing Campaigns :</p>
 		                                <p>40%</p>
 		                            </li>
 		                        </ul>
 		                	</div>
 		                </div>
 	                </div>
-	            </div>    
+	                
+	                <div class="col-4 m-4 white">
+                        <div class="row d-flex flex-column white">
+                            <h2 class="mt-3 ml-3 mb-0 font-weight-bold">Accounts</h2>
+                            <p class="mt-0 ml-3 mb-4 text-muted">Existing User Accounts</p>
+                        </div>
+                        <div class="row d-flex flex-column ml-3 mr-4">
+                            <canvas id="accountChart" width="100%" height="90%"></canvas>
+                        </div>
+                    </div>	                
+	            </div> 
                 
                 <!-- footer -->
 		        <footer class="page-footer font-small text-light">
