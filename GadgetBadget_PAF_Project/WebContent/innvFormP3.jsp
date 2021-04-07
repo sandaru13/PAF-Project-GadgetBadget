@@ -31,46 +31,31 @@
 </head>
 <body>
 
-		<div class="container" style="background-color:#E0F7FA;">
-			<br><br>
-			<center><h3>Finacial Status</h3></center><br>
+	<div class="container" style="background-color:#E0F7FA;">
+		<br><br>
+		<center><h3>Let's look at a Preview</h3></center>
+		<center><h4>Feel Free to change the details if something went wrong</h4></center><br>
 			
 		    <center>
-				<img src="innvP3.png"/>
+				<img src="innvPi3.png"/>
 			</center>
 			
 			<div class="row" style="width:1500px; margin:0 auto;">
 			    	<div class="col-lg-4">
-				  		<div class="card" style="width:500px;margin-left:270px;margin-top:40px" >
+				  		<div class="card" style="width:500px;margin-left:290px;margin-top:40px" >
 				  		
 				  		<form style="margin:30px 30px 30px 30px;">
+						<h5>Display a preview(Must Implement)</h5>
 			
-						 	Nationality
-						    <input type="text" class="form-control" name="nationality" placeholder=""><br>
-							
-							NIC number
-							<input type="text" class="form-control" name="getNIC" placeholder=""><br>
-							
-							Photo of NIC
-							<input type="file" class="form-control" src="" name="photoNIC" accept = "image/*"><br>
-							
-							Bank Name
-							<input type="text" class="form-control" name="getbank" placeholder=""><br>
-							
-							Provide your Bank Account number
-							<input type="text" class="form-control" name="bankNumber" placeholder=""><br>
-							
-							Contact Number
-							<input type="text" class="form-control" name="contackNumber" placeholder=""><br>
-							
-							
-							<button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP4.jsp'">Proceed to next page</button>
+						<center><button type="button" class="btn btn-success" onclick="">POST your Campaign</button></center>
+						
 						</form>
+						
 						</div>
 					</div>
-				</div>
-				
 			</div>
+				
+	</div>
     
 </body>
 </html>

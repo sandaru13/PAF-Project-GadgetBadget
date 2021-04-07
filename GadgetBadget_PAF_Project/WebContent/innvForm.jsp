@@ -31,15 +31,16 @@
 </head>
 <body>
 	<div class="container" style="background-color:#E0F7FA;">
+	
 	<br><br>
-			<center><h3>Let's have a Base Idea about the Project :)</h3></center><br>
+			<center><h3>Let's Add some DETAILS about your Project ;]</h3></center><br>
 	    <center>
-			<img src="innvP1.PNG"/>
+			<img src="innvPi1.png"/>
 		</center><br><br>
 		
 		<div class="row" style="width:1500px; margin:0 auto;">
 			<div class="col-lg-4">
-				  <div class="card" style="width:500px;margin-left:270px;" >
+				  <div class="card" style="width:500px;margin-left:290px;" >
 				
 					<form style="margin:30px 30px 30px 30px;">
 					    Campaign Title
@@ -55,6 +56,16 @@
 						     <option value="gam">Gaming</option>
 						    </select>
 					    <br><br>
+					    					
+					    Pitch Your project idea with your community
+					    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project within 5min" required maxlength="1000" style="height:80px;">
+					    <br>
+					    Let's add some pictures 
+					    <input type="file" class="form-control" src="" name="projectPic" accept = "image/*">
+					    <br>
+					    
+					    <!-- must implement img input -->
+					    
 					    The Project is managed by
 					    <br>
 					        <input type="radio" id="solo" name="manage" value="solo">
@@ -64,36 +75,58 @@
 							<input type="radio" id="friends" name="manage" value="friends">
 							<label for="friends">with my friends</label><br>
 						<br>
-						What is your prefer currency
-					    <br>
-					    	<input type="radio" id="lkr" name="currency" value="lkr">
-							<label for="lkr">LKR</label><br>
-							<input type="radio" id="dollar" name="currency" value="dollar">
-							<label for="dollar">USD$</label></br></br>
-							
+						
 						Set minimum amount goal
 						<br>
-						   	<input type="radio" id="mf1" name="minFund" value="mf1">
-							<label for="mf1">1000$</label><br>
-							<input type="radio" id="mf2" name="minFund" value="mf2">
-							<label for="mf2">10000$</label><br>
-							<input type="radio" id="mf3" name="minFund" value="mf3">
-							<label for="mf1">50000$</label><br>
-							<input type="radio" id="mf4" name="minFund" value="mf4">
-							<label for="mf4">100000$</label><br>
-							<input type="radio" id="mf4" name="minFund" value="mf4">
-							<label for="mf4">I'm not sure yet</label></br></br>
+						<input type="text" class="form-control" name="minGoal" placeholder="" required>
+						<br>
+						
+						Offers to backers as rewards<br>
+					    <div class=container>
+							<div class="row" style="margin-top:10px;">
+						
+								<div class="col" style="margin-left:-10px;">
+									<input type="button" class="btn btn-outline-success" value="Custom Reward" onclick="ShowHideDiv(this)" >					
+								</div>
+																			
+								<div class="col">
+									<input type="button" value="I don't think so" onclick="ShowHideDiv(this)" class="btn btn-outline-warning">								
+								</div>
+								
+							</div>
+						</div>
+						<br>
+						
+						<div class=container>
+							<div class="row">	
+								<div id="dvReward" style="display: none">
+								    Offer Percentage:
+								    <input type="text" id="inReward" class="form-control">							    
+								</div>
+							</div>
+						</div>	
+						<br>
+						
+						Deadline 
+						<input type="date" class="form-control" name="deadline"><br>
 					    
 					    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
-					    
-					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button>
+				
+					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_Test/innvFormP2.jsp'">Proceed to next page</button>
 					  </form>
 					</div>
 				</div>
 			</div>
 		
     	</div>
-    
+    	
+    	<script type="text/javascript">
+				function ShowHideDiv(btnRew) {
+				     var dvReward = document.getElementById("dvReward");
+				      dvReward.style.display = btnRew.value == "Custom Reward" ? "block" : "none";
+				}
+		</script>
+    	
 </body>
 </html>
