@@ -290,7 +290,7 @@
       </fieldset>
      
       <div class="btn-block">
-      <button type="order" href="/">Confirm Order</button>
+      <button type="order" href="/">NEXT</button>
       </div>
     </form>
     </div>
