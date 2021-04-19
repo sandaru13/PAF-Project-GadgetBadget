@@ -113,7 +113,7 @@
 					    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
 				
-					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_Test/innvFormP2.jsp'">Proceed to next page</button>
+					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button>
 					  </form>
 					</div>
 				</div>

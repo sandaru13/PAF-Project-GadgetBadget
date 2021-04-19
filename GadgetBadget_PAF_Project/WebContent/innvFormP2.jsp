@@ -66,7 +66,7 @@
 							Contact Number
 							<input type="text" class="form-control" name="contackNumber" placeholder=""><br>
 						
-						<button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_Test/innvFormP3.jsp'">Proceed to next page</button>
+						<button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP3.jsp'">Proceed to next page</button>
 				    
 				      </form>
 				  </div>
