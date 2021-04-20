@@ -42,7 +42,7 @@
 			<div class="col-lg-4">
 				  <div class="card" style="width:500px;margin-left:290px;" >
 				
-					<form style="margin:30px 30px 30px 30px;">
+					<form style="margin:30px 30px 30px 30px;" method="post" action="http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp">
 					    Campaign Title
 					    <input type="text" class="form-control" name="campTitle" placeholder="yo..." required>
 					    <br>  
@@ -58,7 +58,7 @@
 					    <br><br>
 					    					
 					    Pitch Your project idea with your community
-					    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project within 5min" required maxlength="1000" style="height:80px;">
+					    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project Idea.." required maxlength="1000" style="height:80px;">
 					    <br>
 					    Let's add some pictures 
 					    <input type="file" class="form-control" src="" name="projectPic" accept = "image/*">
@@ -113,7 +113,8 @@
 					    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
 				
-					    <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button>
+					   <!--  <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button> -->
+					   <input name="btnSubmit" type="submit" value="Save" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/InnovatorService/Innovator/form1'">
 					  </form>
 					</div>
 				</div>

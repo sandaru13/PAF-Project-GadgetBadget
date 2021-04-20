@@ -2,6 +2,8 @@ package com;
 
 import model.Innovator;
 
+import java.util.Date;
+
 //For REST Service
 import javax.ws.rs.*; 
 import javax.ws.rs.core.MediaType;
@@ -26,4 +28,18 @@ public class InnovatorService {
 	 { 
 		return innvObj.readItems();
 	 } 
+	
+	@POST
+	@Path("/form1") 
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
+	@Produces(MediaType.TEXT_PLAIN)
+	
+	public String insertItem( @FormParam("campTitle") String Title, @FormParam("category") String Category,  @FormParam("projectDetails") String Description ,
+			@FormParam("manage") String ManageBy,  @FormParam("minGoal") float Amount, @FormParam("deadline") Date DeadLine) 
+	{ 
+	 String output = innvObj.insertItem(Title, Category,Description,ManageBy,Amount,DeadLine); 
+	return output; 
+	}
+
+	
 }
