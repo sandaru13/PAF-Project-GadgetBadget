@@ -159,4 +159,140 @@ public class Admin {
 		} 
 		return output; 
 	}
+	
+	public String readPurchase() { 
+		
+		String output = ""; 
+		
+		try { 
+			Connection con = connect(); 
+			
+			if (con == null) {
+				return "Error while connecting to the database for reading."; } 
+	 
+				// Prepare the html table to be displayed
+				output = "<table border='1'><tr><th>Id</th><th>Project ID</th><th>Buyer Account ID</th><th>Price</th><th>Action</th>"; 
+				String query = "select * from purchase"; 
+				Statement stmt = con.createStatement(); 
+				ResultSet rs = stmt.executeQuery(query); 
+	 
+				// iterate through the rows in the result set
+	 
+				while (rs.next()) { 
+					String bID = Integer.toString(rs.getInt("bId"));
+					String pID = Integer.toString(rs.getInt("pId"));
+					String bAccId = Integer.toString(rs.getInt("bAccId"));
+					String price = Double.toString(rs.getDouble("Amount"));				
+					
+					// Add into the html table
+					output += "<tr><td>" + bID + "</td>"; 
+					output += "<td>" + pID + "</td>"; 
+					output += "<td>" + bAccId + "</td>"; 
+					output += "<td>" + price + "</td>";
+					
+					// buttons
+					output += "<td><form method='post' action='#'>" + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" + "<input name='purchaseID' type='hidden' value='" + bID + "'>" + "</form></td></tr>"; 
+				} 
+	 
+				con.close(); 
+				// Complete the html table
+				output += "</table>"; 
+		} catch (Exception e) { 
+			output = "Error while reading the items."; 
+			System.err.println(e.getMessage()); 
+		} 
+		return output; 
+	}
+
+	public String readInnovatorAccount() { 
+		
+		String output = ""; 
+		
+		try { 
+			Connection con = connect(); 
+			
+			if (con == null) {
+				return "Error while connecting to the database for reading."; } 
+	 
+				// Prepare the html table to be displayed
+				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Action</th>"; 
+				String query = "select * from innovators"; 
+				Statement stmt = con.createStatement(); 
+				ResultSet rs = stmt.executeQuery(query); 
+	 
+				// iterate through the rows in the result set
+	 
+				while (rs.next()) { 
+					String innID = Integer.toString(rs.getInt("innId"));
+					String fname = rs.getString("fname");
+					String lname = rs.getString("lname");
+					String email = rs.getString("email");
+					String password = rs.getString("password");
+					
+					// Add into the html table
+					output += "<tr><td>" + innID + "</td>"; 
+					output += "<td>" + fname + "</td>"; 
+					output += "<td>" + lname + "</td>"; 
+					output += "<td>" + email + "</td>";
+					output += "<td>" + password + "</td>";
+					
+					// buttons
+					output += "<td><form method='post' action='#'>" + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" + "<input name='innovatorID' type='hidden' value='" + innID + "'>" + "</form></td></tr>"; 
+				} 
+	 
+				con.close(); 
+				// Complete the html table
+				output += "</table>"; 
+		} catch (Exception e) { 
+			output = "Error while reading the items."; 
+			System.err.println(e.getMessage()); 
+		} 
+		return output; 
+	}
+	
+	public String readBuyerAccount() { 
+		
+		String output = ""; 
+		
+		try { 
+			Connection con = connect(); 
+			
+			if (con == null) {
+				return "Error while connecting to the database for reading."; } 
+	 
+				// Prepare the html table to be displayed
+				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Action</th>"; 
+				String query = "select * from buyers"; 
+				Statement stmt = con.createStatement(); 
+				ResultSet rs = stmt.executeQuery(query); 
+	 
+				// iterate through the rows in the result set
+	 
+				while (rs.next()) { 
+					String buyerID = Integer.toString(rs.getInt("buyerId"));
+					String fname = rs.getString("fname");
+					String lname = rs.getString("lname");
+					String email = rs.getString("email");
+					String password = rs.getString("password");
+					
+					// Add into the html table
+					output += "<tr><td>" + buyerID + "</td>"; 
+					output += "<td>" + fname + "</td>"; 
+					output += "<td>" + lname + "</td>"; 
+					output += "<td>" + email + "</td>";
+					output += "<td>" + password + "</td>";
+					
+					// buttons
+					output += "<td><form method='post' action='#'>" + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" + "<input name='buyerID' type='hidden' value='" + buyerID + "'>" + "</form></td></tr>"; 
+				} 
+	 
+				con.close(); 
+				// Complete the html table
+				output += "</table>"; 
+		} catch (Exception e) { 
+			output = "Error while reading the items."; 
+			System.err.println(e.getMessage()); 
+		} 
+		return output; 
+	}
 }

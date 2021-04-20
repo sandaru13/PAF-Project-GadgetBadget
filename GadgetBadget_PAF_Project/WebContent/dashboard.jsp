@@ -121,8 +121,8 @@
 	
 	                        <li><a class="dropbtnAccounts" href="#"><i class="fas fa-id-card mr-3"></i>Accounts<span class="fas fa-sort-down Accounts-sp"></span></a>
 	                            <ul class="dropContAccounts">
-	                                <li><a href="">Innovators</a></li>
-	                                <li><a href="">Buyers</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/InnovatorAccount">Innovators</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/BuyerAccount">Buyers</a></li>
 	                            </ul>
 	                        </li>
 	
@@ -136,7 +136,7 @@
 	                        <li><a class="dropbtnPayments" href="#"><i class="fas fa-dollar-sign mr-3"></i>Payments<span class="fas fa-sort-down Payments-sp"></span></a>
 	                            <ul class="dropContPayments">
 	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/Donation">Funds</a></li>
-	                                <li><a href="">Purchase</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/Purchase">Purchase</a></li>
 	                            </ul>
 	                        </li>
 		

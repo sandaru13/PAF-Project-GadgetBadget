@@ -20,6 +20,9 @@ public class AdminService {
 	Admin adminObj = new Admin();
 	Admin adminObj2 = new Admin();
 	Admin adminObj3 = new Admin();
+	Admin adminObj4 = new Admin();
+	Admin adminObj5 = new Admin();
+	Admin adminObj6 = new Admin();
 	
 	@GET
 	@Path("/Ongoing") 
@@ -40,5 +43,26 @@ public class AdminService {
 	@Produces(MediaType.TEXT_HTML)
 	public String readDonation() { 
 		return adminObj3.readDonation(); 	
+	}
+	
+	@GET
+	@Path("/Purchase") 
+	@Produces(MediaType.TEXT_HTML)
+	public String readPurchase() { 
+		return adminObj4.readPurchase(); 	
+	}
+	
+	@GET
+	@Path("/InnovatorAccount") 
+	@Produces(MediaType.TEXT_HTML)
+	public String readInnovatorAccount() { 
+		return adminObj5.readInnovatorAccount(); 	
+	}
+	
+	@GET
+	@Path("/BuyerAccount") 
+	@Produces(MediaType.TEXT_HTML)
+	public String readBuyerAccount() { 
+		return adminObj5.readBuyerAccount(); 	
 	}
 }
