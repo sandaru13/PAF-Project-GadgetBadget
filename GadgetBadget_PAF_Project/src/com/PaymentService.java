@@ -35,7 +35,7 @@ public class PaymentService {
 	 @FormParam("Email") String Email, 
 	 @FormParam("Address") String Address, 
 	 @FormParam("ContactNumber") String ContactNumber, 
-	 @FormParam("CardofName") String CardName, 
+	 @FormParam("CardName") String CardName, 
 	 @FormParam("CreditCardNumber") String CreditCardNumber, 
 	 @FormParam("ExpiryDate") String ExpiryDate, 
 	 @FormParam("CVV") String CVV) 
