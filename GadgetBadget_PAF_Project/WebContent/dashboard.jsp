@@ -128,14 +128,14 @@
 	
 	                        <li><a class="dropbtnProjects" href="#"><i class="fas fa-box mr-3"></i>Projects<span class="fas fa-sort-down Projects-sp"></span></a>
 	                            <ul class="dropContProjects">
-	                                <li><a href="">Ongoing Campaigns</a></li>
-	                                <li><a href="">Finished Campaigns</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/Ongoing">Ongoing Campaigns</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/Finished">Finished Campaigns</a></li>
 	                            </ul>
 	                        </li>
 	
 	                        <li><a class="dropbtnPayments" href="#"><i class="fas fa-dollar-sign mr-3"></i>Payments<span class="fas fa-sort-down Payments-sp"></span></a>
 	                            <ul class="dropContPayments">
-	                                <li><a href="">Funds</a></li>
+	                                <li><a href="http://localhost:8080/GadgetBadget_PAF_Project/AdminService/Admin/Donation">Funds</a></li>
 	                                <li><a href="">Purchase</a></li>
 	                            </ul>
 	                        </li>
