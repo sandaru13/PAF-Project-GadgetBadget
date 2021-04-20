@@ -20,6 +20,7 @@
  	<servlet-name>Jersey Web Application</servlet-name>
  	<url-pattern>/AdminService/*</url-pattern>
  	<url-pattern>/InnovatorService/*</url-pattern>
+ 	<url-pattern>/PaymentService/*</url-pattern>
   </servlet-mapping>
   
 </web-app>
