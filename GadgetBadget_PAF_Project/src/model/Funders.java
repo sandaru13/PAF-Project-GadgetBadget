@@ -35,7 +35,7 @@ public class Funders {
 			{ 
 				 if (con == null) 
 				 {
-					 return "Error while connecting to the database for inserting."; 
+					 return "Error with the connection of the database in inserting!"; 
 					 } 
 				 // create a prepared statement
 				 String query = " insert into donation (`innovID`,`name`,`email`,`amount`,`cardNo`,`expd`, `cvv`,`comments`)" + " values (?, ?, ?, ?, ?, ?, ?,?)"; 
@@ -54,11 +54,12 @@ public class Funders {
 				 preparedStmt.execute(); 
 				 con.close(); 
 				 System.out.println(query);
-				 output = "Inserted successfully"; 
+				 output = "Thank You!"
+				 		+ "We have successfully received your donation."; 
 			 } 
 			 catch (Exception e) 
 			 { 
-				 output = "Error while inserting the donation."; 
+				 output = "Error in the data insertion!"; 
 				 System.err.println(e.getMessage()); 
 			 } 
 		return output; 
@@ -73,7 +74,7 @@ public class Funders {
 				 Connection con = connect(); 
 					 if (con == null) 
 					 {
-					 return "Error while connecting to the database for reading."; 
+					 return "Error with the connection of the database in reading!"; 
 					 } 
 				
 					 // Prepare the html table to be displayed
@@ -113,7 +114,7 @@ public class Funders {
 				
 					 // buttons
 					 output +="<td><input name='btnUpdate' type='button' value='Update' onclick =  class='btn btn-secondary'></td>"
-							 + "<td><form method='post' action= 'updatePayment.jsp'>"
+							 + "<td><form method='post' action= 'updateDonation.jsp'>"
 							 + "<input name='btnRemove' type='submit' value='Delete' class='btn btn-danger'>"
 							 + "<input name='innovationID' type='hidden' value='" + innovID + "'>" 
 							 + "</form></td></tr>"; 
@@ -125,7 +126,7 @@ public class Funders {
 				 
 			 catch (Exception e) 
 			 { 
-				 output = "Error while reading the donation."; 
+				 output = "Error while reading the donation details!"; 
 				 System.err.println(e.getMessage()); 
 				 } 
 			 return output; 
@@ -141,7 +142,7 @@ public class Funders {
 					 Connection con = connect(); 
 						 if (con == null) 
 						 {
-							 return "Error while connecting to the database for updating.";
+							 return "Error with the connection of the database in updating!";
 							 
 						 } 
 						 // create a prepared statement
@@ -160,11 +161,11 @@ public class Funders {
 						 // execute the statement
 						 preparedStmt.execute(); 
 						 con.close(); 
-						 output = "Updated successfully"; 
+						 output = "Successfully updated your donation."; 
 				 } 
 				 catch (Exception e) 
 				 { 
-					 output = "Error while updating the donation."; 
+					 output = "Error in the data updation!."; 
 					 System.err.println(e.getMessage()); 
 				 } 
 			 return output; 
@@ -180,7 +181,7 @@ public class Funders {
 					 Connection con = connect(); 
 						 if (con == null) 
 						 {
-							 return "Error while connecting to the database for deleting."; 
+							 return "Error with the connection of the database in deleting!"; 
 							 
 						 } 
 						
@@ -194,12 +195,12 @@ public class Funders {
 						 // execute the statement
 						 preparedStmt.execute(); 
 						 con.close(); 
-						 output = "Deleted successfully"; 
+						 output = "Your donation has been deleted."; 
 				 } 
 		 
 			catch (Exception e) 
 			 { 
-					output = "Error while deleting the donation."; 
+					output = "Error while deleting your donation!"; 
 					System.err.println(e.getMessage()); 
 			 } 
 		 return output; 
