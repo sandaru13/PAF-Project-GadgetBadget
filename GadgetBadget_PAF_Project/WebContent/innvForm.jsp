@@ -42,7 +42,7 @@
 			<div class="col-lg-4">
 				  <div class="card" style="width:500px;margin-left:290px;" >
 				
-					<form style="margin:30px 30px 30px 30px;" method="post" action="http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp">
+					<form style="margin:30px 30px 30px 30px;" method="POST" action="InnovatorService/Innovator/form1">
 					    Campaign Title
 					    <input type="text" class="form-control" name="campTitle" placeholder="yo..." required>
 					    <br>  
@@ -114,7 +114,7 @@
 					    <label for="AgreementP1">Terms and Conditions</label><br>
 				
 					   <!--  <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button> -->
-					   <input name="btnSubmit" type="submit" value="Save" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/InnovatorService/Innovator/form1'">
+					   <input name="btnSubmit" type="submit" value="Save" >
 					  </form>
 					</div>
 				</div>
