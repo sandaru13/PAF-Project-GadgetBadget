@@ -63,6 +63,16 @@ public class AdminService {
 	@Path("/BuyerAccount") 
 	@Produces(MediaType.TEXT_HTML)
 	public String readBuyerAccount() { 
-		return adminObj5.readBuyerAccount(); 	
+		return adminObj6.readBuyerAccount(); 	
 	}
+	
+	@POST
+	@Path("/SignUp")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
+	@Produces(MediaType.TEXT_PLAIN)
+	public String insertAccount(@FormParam("type") String type, @FormParam("signFnam") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
+		String output = adminObj.insertAccount(type, fname, lname, email, password); 
+		return output; 
+	}
+	
 }

@@ -295,4 +295,54 @@ public class Admin {
 		} 
 		return output; 
 	}
+	
+	public String insertAccount(String type, String fname, String lname, String email, String password) { 
+		
+		String output = ""; 
+		
+		try { 
+			Connection con = connect(); 
+			
+			if (con == null) {
+				return "Error while connecting to the database for inserting."; } 
+				
+				// create a prepared statement
+				String query;
+			
+				if (type == "Innovator") {
+					 query = " insert into innovators (`innId`,`fname`,`lname`,`email`,`password`)" + " values (?, ?, ?, ?, ?)"; 
+					 PreparedStatement preparedStmt = con.prepareStatement(query);
+					 
+					// binding values
+					preparedStmt.setInt(1, 0); 
+					preparedStmt.setString(2, fname); 
+					preparedStmt.setString(3, lname); 
+					preparedStmt.setString(4, email); 
+					preparedStmt.setString(5, password); 
+					// execute the statement
+					preparedStmt.execute(); 
+				}
+				
+				else if(type == "Buyer" ) {
+					query = " insert into buyers (`buyerId`,`fname`,`lname`,`email`,`password`)" + " values (?, ?, ?, ?, ?)";
+					PreparedStatement preparedStmt = con.prepareStatement(query);
+					
+					// binding values
+					preparedStmt.setInt(1, 1); 
+					preparedStmt.setString(2, fname); 
+					preparedStmt.setString(3, lname); 
+					preparedStmt.setString(4, email); 
+					preparedStmt.setString(5, password); 
+					// execute the statement
+					preparedStmt.execute(); 
+				}
+				
+				con.close(); 
+				output = "Inserted successfully"; 
+		} catch (Exception e) { 
+			output = "Error while inserting the item."; 
+			System.err.println(e.getMessage()); 
+		}
+		return output; 
+	}  
 }

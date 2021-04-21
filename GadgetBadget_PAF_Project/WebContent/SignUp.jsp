@@ -34,12 +34,23 @@
                     <div class="front row">
                         <div class="col-6 signupLeft">
                         
-                            <form class="text-center p-3" action="#" method="POST">
+                            <form class="text-center p-3" action="AdminService/Admin/SignUp" method="POST">
 
                                 <h1 class="h1 mb-0 d-flex flex-row">Sign up</h1>
                                 <small class="mt-0 text-muted mb-4">... Join the Community</small>
 
                                 <div class="form-row mb-4 mt-3">
+                                	<div class="col">
+                                        <!-- Account type -->
+                                        <label for="accType"><b>Choose an Account Type:</b></label>
+                                        <select name="accType" id="accType" class="form-control" placeholder="Account Type">
+                                        	<option hidden=TRUE>Account Type</option>
+                                        	<option>Innovator</option>
+                                        	<option>Buyer</option>
+                                        </select>
+                                    </div>
+                                </div>    
+                                <div class="form-row mb-4 mt-3">     
                                     <div class="col">
                                         <!-- First name -->
                                         <input type="text" id="signFname" name="signFname" class="form-control" placeholder="First name">
