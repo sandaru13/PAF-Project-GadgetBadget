@@ -44,7 +44,7 @@
 				
 					<form style="margin:30px 30px 30px 30px;" method="POST" action="InnovatorService/Innovator/form1">
 					    Campaign Title
-					    <input type="text" class="form-control" name="campTitle" placeholder="yo..." required>
+					    <input type="text" class="form-control" name="campTitle" id ="campTitle"  placeholder="yo...">
 					    <br>  
 					    
 					    <label for="category">Fund Raiser Category</label>
@@ -58,10 +58,10 @@
 					    <br><br>
 					    					
 					    Pitch Your project idea with your community
-					    <input type="text" class="form-control" name="projectDetails" placeholder="Describe your project Idea.." required maxlength="1000" style="height:80px;">
+					    <input type="text" class="form-control" name="projectDetails" id="projectDetails" placeholder="Describe your project Idea.." required maxlength="250" minLength="10" style="height:80px;">
 					    <br>
 					    Let's add some pictures 
-					    <input type="file" class="form-control" src="" name="projectPic" accept = "image/*">
+					    <input type="file" class="form-control" src="" name="projectPic" id="projectPic" accept = "image/*">
 					    <br>
 					    
 					    <!-- must implement img input -->
@@ -78,7 +78,7 @@
 						
 						Set minimum amount goal
 						<br>
-						<input type="text" class="form-control" name="minGoal" placeholder="" required>
+						<input type="text" class="form-control" name="minGoal" id="minGoal" placeholder="" required >
 						<br>
 						
 						Offers to backers as rewards<br>
@@ -101,16 +101,16 @@
 							<div class="row">	
 								<div id="dvReward" style="display: none">
 								    Offer Percentage:
-								    <input type="text" id="inReward" class="form-control">							    
+								    <input type="text" id="inReward" name="inReward" class="form-control">							    
 								</div>
 							</div>
 						</div>	
 						<br>
 						
 						Deadline 
-						<input type="date" class="form-control" name="deadline"><br>
+						<input type="date" class="form-control" name="deadline" id="deadline" required><br>
 					    
-					    <input type="checkbox" id="AgreementP1" name="Agreement" value="AgreementP1" required>
+					    <input type="checkbox" id="AgreementP1" name="Agreement" id="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
 				
 					   <!--  <button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP2.jsp'">Proceed to next page</button> -->
@@ -128,6 +128,7 @@
 				      dvReward.style.display = btnRew.value == "Custom Reward" ? "block" : "none";
 				}
 		</script>
+    	
     	
 </body>
 </html>

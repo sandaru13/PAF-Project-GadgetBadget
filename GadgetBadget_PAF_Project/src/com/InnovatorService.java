@@ -114,5 +114,27 @@ public class InnovatorService {
 	 return out;
 	}
 	
+	//innovator financial details section
+	
+	@GET
+	@Path("/readInnvFin") 
+	@Produces(MediaType.TEXT_HTML) 
+	public String readItemsFin() 
+	 { 
+		return innvObj.readItemsFin();
+	 } 
+		
+		//insert financial details
+	@POST
+	@Path("/form2") 
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
+	@Produces(MediaType.TEXT_PLAIN)
+	
+	public String insertFinDetails( @FormParam("nationality") String nationality, @FormParam("getPass") String passport,  @FormParam("getbank") String bank ,
+			@FormParam("bankNumber") Integer accNumber,@FormParam("address") String adddress,@FormParam("contacNumber") Integer contact) 
+	{ 
+	String output = innvObj.insertFinDet(nationality,passport, bank, accNumber, adddress, contact); 
+	return output; 
+	}
 	
 }

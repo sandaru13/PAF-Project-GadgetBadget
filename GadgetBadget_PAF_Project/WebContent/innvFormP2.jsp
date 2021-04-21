@@ -46,25 +46,25 @@
 				  		<form style="margin:30px 30px 30px 30px;">
 				  							
 					        Nationality
-						    <input type="text" class="form-control" name="nationality" placeholder=""><br>
+						    <input type="text" class="form-control" name="nationality"  id="nationality" placeholder="" required><br>
 							
 							Passport number
-							<input type="text" class="form-control" name="getPass" placeholder=""><br>
+							<input type="text" class="form-control" name="getPass" id="getPass" placeholder="" required><br>
 							
 							Photo of Passport
-							<input type="file" class="form-control" src="" name="phoofPass" accept = "image/*"><br>
+							<input type="file" class="form-control" src="" name="phoofPass" id="phoofPass" accept = "image/*"><br>
 							
 							Bank Name
-							<input type="text" class="form-control" name="getbank" placeholder=""><br>
+							<input type="text" class="form-control" name="getbank" id="getbank" placeholder="" required><br>
 							
 							Provide your Bank Account number
-							<input type="text" class="form-control" name="bankNumber" placeholder=""><br>
+							<input type="text" class="form-control" name="bankNumber" id="bankNumber" placeholder="" required><br>
 							
 							Address
-							<input type="text" class="form-control" name="address" placeholder=""><br>
+							<input type="text" class="form-control" name="address"  id="address" placeholder="" required><br>
 							
 							Contact Number
-							<input type="text" class="form-control" name="contackNumber" placeholder=""><br>
+							<input type="text" class="form-control" name="contacNumber" id="contacNumber" placeholder="" required><br>
 						
 						<button type="button" class="btn btn-success" onclick="location.href='http://localhost:8080/GadgetBadget_PAF_Project/innvFormP3.jsp'">Proceed to next page</button>
 				    

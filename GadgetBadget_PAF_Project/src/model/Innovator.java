@@ -248,6 +248,110 @@ public class Innovator {
 				 return output; 
 				 
 		}
-
+		
+		
+		//Innovator Financial details Section
+		
+		public String readItemsFin() 
+		 {
+			
+		 String output = ""; 
+		 
+		 try
+		 { 
+		 Connection con = connect(); 
+		 if (con == null) 
+		 {
+			 return "Error while connecting to the database for reading."; } 
+		 
+		 // Prepare the html table to be displayed
+		 
+		 output = "<table border='1'><tr><th>pId</th><th>Id</th>" +
+		 "<th>Nationality</th>" + 
+		 "<th>Passport_Id</th>" +
+		 "<th>BankName</th>" +
+		 "<th>AccountNo</th>" +
+		 "<th>Address</th>" +
+		 "<th>Contact</th></tr>"; 
+		 
+		 String query = "select * from projects_verification"; 
+		 Statement stmt = con.createStatement(); 
+		 ResultSet rs = stmt.executeQuery(query); 
+		 
+		 // iterate through the rows in the result set
+		 
+		 while (rs.next()) { 
+		 String iD = Integer.toString(rs.getInt("Id")); 
+		 String nationality = rs.getString("Nationality"); 
+		 String pass = rs.getString("Passport_Id"); 
+		 String bankName = rs.getString("BankName"); 
+		 Integer account = rs.getInt("AccountNo"); 
+		 String address = rs.getString("Address"); 
+		 Integer contact = rs.getInt("Contact"); 
+		 
+		 // Add into the html table
+		 output += "<tr><td>" + iD + "</td>"; 
+		 output += "<td>" + nationality + "</td>"; 
+		 output += "<td>" +  pass + "</td>"; 
+		 output += "<td>" + bankName + "</td>"; 
+		 output += "<td>" + account + "</td>";
+		 output += "<td>" + address + "</td>"; 
+		 output += "<td>" + contact + "</td>";
+		 
+		 // buttons
+			output += "<td><form method='post' action='#'>"
+					+ "<input name='btnRemove' "
+					+ " type='submit' value='Remove'>"
+					+ "<input name='itemID' type='hidden' "
+					+ " value='" + iD + "'>" + "</form></td></tr>";
+		 } 
+		 con.close(); 
+		 // Complete the html table
+		 output += "</table>"; 
+		 } 
+		 catch (Exception e) 
+		 { 
+		 output = "Error while reading Financial details of innovators."; 
+		 System.err.println(e.getMessage()); 
+		 } 
+		 return output; 
+		 } 
+		
+		
+		 //Innovator financial details insert function
+		
+		public String insertFinDet(String nationality, String passport, String bank, Integer accNumber,String address, Integer contact) {
+			
+			 String output = ""; 
+			 try
+			 { 
+			 Connection con = connect(); 
+			 if (con == null) 
+			 {return "Error while connecting to the database for inserting."; } 
+			 // create a prepared statement
+			 String query = " insert into projects_verification('Id','Nationality','Passport_Id','BankName','AccountNo','Address','Contact')"
+						+ " values (?, ?, ?, ?, ?, ?, ?)";
+			 PreparedStatement preparedStmt = con.prepareStatement(query); 
+			 // binding values
+			 preparedStmt.setInt(1, 0); 
+			 preparedStmt.setString(2, nationality); 
+			 preparedStmt.setString(3, passport); 
+			 preparedStmt.setString(4,  bank); 
+			 preparedStmt.setInt(5, accNumber); 
+			 preparedStmt.setString(6, address);
+			 preparedStmt.setInt(5, contact); 
+			// execute the statement
+			 preparedStmt.execute(); 
+			 con.close(); 
+			 output = "Inserted innovator financial details successfully"; 
+			 } 
+			 catch (Exception e) 
+			 { 
+			 output = "Error while inserting the innovator financial details"; 
+			 System.err.println(e.getMessage()); 
+			 } 
+			 return output; 
+			
+		}
 	
 }
