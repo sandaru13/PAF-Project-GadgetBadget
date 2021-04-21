@@ -336,7 +336,7 @@ public class Admin {
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 					
 					// binding values
-					preparedStmt.setInt(1, 1); 
+					preparedStmt.setInt(1, 0); 
 					preparedStmt.setString(2, fname); 
 					preparedStmt.setString(3, lname); 
 					preparedStmt.setString(4, email); 
@@ -384,7 +384,6 @@ public class Admin {
 			 output = "Error while updating the item."; 
 			 System.err.println(e.getMessage()); 
 		 }
-		 
 		 return output; 
 	}
 	
@@ -418,7 +417,70 @@ public class Admin {
 			 output = "Error while updating the item."; 
 			 System.err.println(e.getMessage()); 
 		 }
-		 
 		 return output; 
+	}
+	
+	//delete innovator account
+	public String deleteInnovator(String innId) {
+		
+		String output = "";
+
+		try {
+			Connection con = connect();
+
+			if (con == null) {
+				return "Error while connecting to the database for deleting.";
+			}
+
+			// create a prepared statement
+			String query = "delete from innovators where innId=?";
+			PreparedStatement preparedStmt = con.prepareStatement(query);
+
+			// binding values
+			preparedStmt.setInt(1, Integer.parseInt(innId));
+
+			// execute the statement
+			preparedStmt.execute();
+			con.close();
+
+			output = "payment details Deleted successfully";
+
+		} catch (Exception e) {
+			output = "Error while deleting the payment details.";
+			System.err.println(e.getMessage());
+		}
+		return output;
+	}
+	
+	//delete buyer account
+	public String deleteBuyer(String buyerId) {
+		
+		String output = "";
+
+		try {
+			Connection con = connect();
+
+			if (con == null) {
+				return "Error while connecting to the database for deleting.";
+			}
+
+			// create a prepared statement
+			String query = "delete from buyers where buyerId=?";
+			PreparedStatement preparedStmt = con.prepareStatement(query);
+
+			// binding values
+			preparedStmt.setInt(1, Integer.parseInt(buyerId));
+
+			// execute the statement
+			preparedStmt.execute();
+			con.close();
+
+			output = "payment details Deleted successfully";
+
+		} catch (Exception e) {
+			output = "Error while deleting the payment details.";
+			System.err.println(e.getMessage());
+		}
+		return output;
 	}
 }

@@ -70,7 +70,7 @@ public class AdminService {
 	@Path("/SignUp")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN)
-	public String insertAccount(@FormParam("type") String type, @FormParam("signFnam") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
+	public String insertAccount(@FormParam("type") String type, @FormParam("signFname") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
 		String output = adminObj.insertAccount(type, fname, lname, email, password); 
 		return output; 
 	}
@@ -119,5 +119,33 @@ public class AdminService {
 		return output; 
 	}
 	
+	@DELETE
+	@Path("/DeleteInnovator") 
+	@Consumes(MediaType.APPLICATION_XML) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String deleteInnovator(String innovatorData) { 
+		
+		//Convert the input string to an XML document
+		Document doc = Jsoup.parse(innovatorData, "", Parser.xmlParser()); 
+	 
+		String innId = doc.select("innId").text(); 
+		String output = adminObj.deleteInnovator(innId); 
 	
+		return output; 
+	}
+	
+	@DELETE
+	@Path("/DeleteBuyer") 
+	@Consumes(MediaType.APPLICATION_XML) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String deleteBuyer(String buyerData) { 
+		
+		//Convert the input string to an XML document
+		Document doc2 = Jsoup.parse(buyerData, "", Parser.xmlParser()); 
+	 
+		String buyerId = doc2.select("buyerId").text(); 
+		String output = adminObj2.deleteBuyer(buyerId); 
+	
+		return output; 
+	}
 }
