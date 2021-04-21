@@ -75,4 +75,49 @@ public class AdminService {
 		return output; 
 	}
 	
+	@PUT
+	@Path("/EditInnovator") 
+	@Consumes(MediaType.APPLICATION_JSON) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String updateInnovator(String InnovatorData) { 
+	
+		//Convert the input string to a JSON object 
+		JsonObject adObj = new JsonParser().parse(InnovatorData).getAsJsonObject(); 
+	
+		//Read the values from the JSON object
+		String innId = adObj.get("innId").getAsString(); 
+		String fname = adObj.get("fname").getAsString(); 
+		String lname = adObj.get("lname").getAsString(); 
+		String email = adObj.get("email").getAsString(); 
+		String password = adObj.get("password").getAsString(); 
+ 
+		
+		String output = adminObj.updateInnovator(innId, fname, lname, email, password); 
+	
+		return output; 
+	}
+	
+	@PUT
+	@Path("/EditBuyer") 
+	@Consumes(MediaType.APPLICATION_JSON) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String updateBuyer(String BuyerData) { 
+	
+		//Convert the input string to a JSON object 
+		JsonObject adObj2 = new JsonParser().parse(BuyerData).getAsJsonObject(); 
+	
+		//Read the values from the JSON object
+		String innId = adObj2.get("innId").getAsString(); 
+		String fname = adObj2.get("fname").getAsString(); 
+		String lname = adObj2.get("lname").getAsString(); 
+		String email = adObj2.get("email").getAsString(); 
+		String password = adObj2.get("password").getAsString(); 
+ 
+		
+		String output = adminObj2.updateBuyer(innId, fname, lname, email, password); 
+	
+		return output; 
+	}
+	
+	
 }

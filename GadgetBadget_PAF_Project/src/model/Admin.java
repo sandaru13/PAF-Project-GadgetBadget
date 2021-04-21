@@ -5,6 +5,7 @@ import java.sql.*;
 
 public class Admin {
 	
+	//establishing connection
 	private Connection connect() { 
 		
 		Connection con = null; 
@@ -19,6 +20,7 @@ public class Admin {
 		return con; 
 	}
 	
+	//retrieve finished project details
 	public String readFinishedProjects() { 
 		
 		String output = ""; 
@@ -66,6 +68,7 @@ public class Admin {
 		return output; 
 	}
 	
+	//retrieve ongoing project details
 	public String readOngoingProjects() { 
 		
 		String output = ""; 
@@ -116,6 +119,7 @@ public class Admin {
 		return output; 
 	}
 	
+	//retrieve donation details
 	public String readDonation() { 
 		
 		String output = ""; 
@@ -160,6 +164,7 @@ public class Admin {
 		return output; 
 	}
 	
+	//retrieve purchase finished projects details
 	public String readPurchase() { 
 		
 		String output = ""; 
@@ -204,6 +209,7 @@ public class Admin {
 		return output; 
 	}
 
+	//retrieve innovator account details
 	public String readInnovatorAccount() { 
 		
 		String output = ""; 
@@ -250,6 +256,7 @@ public class Admin {
 		return output; 
 	}
 	
+	//retrieve buyer account details
 	public String readBuyerAccount() { 
 		
 		String output = ""; 
@@ -296,6 +303,7 @@ public class Admin {
 		return output; 
 	}
 	
+	//create user
 	public String insertAccount(String type, String fname, String lname, String email, String password) { 
 		
 		String output = ""; 
@@ -345,4 +353,72 @@ public class Admin {
 		}
 		return output; 
 	}  
+	
+	public String updateInnovator( String fname, String lname, String email, String password, String innId) { 
+	 
+		String output = ""; 
+	 
+		try { 
+			Connection con = connect(); 
+	 
+			if (con == null) {
+				return "Error while connecting to the database for updating."; } 
+	 
+			// create a prepared statement
+			String query = "UPDATE innovators SET fname=?, lname=?, email=?, password=? WHERE innId=?"; 
+			PreparedStatement preparedStmt = con.prepareStatement(query); 
+			
+			// binding values
+			preparedStmt.setString(1, fname); 
+			preparedStmt.setString(2, lname); 
+			preparedStmt.setString(3, email); 
+			preparedStmt.setString(4, password); 
+			preparedStmt.setInt(5, Integer.parseInt(innId)); 
+			
+			// execute the statement
+			preparedStmt.execute(); 
+			con.close(); 
+			
+			output = "Updated successfully"; 
+		 } catch (Exception e) { 
+			 output = "Error while updating the item."; 
+			 System.err.println(e.getMessage()); 
+		 }
+		 
+		 return output; 
+	}
+	
+	public String updateBuyer( String fname, String lname, String email, String password, String buyerId) { 
+		 
+		String output = ""; 
+	 
+		try { 
+			Connection con = connect(); 
+	 
+			if (con == null) {
+				return "Error while connecting to the database for updating."; } 
+	 
+			// create a prepared statement
+			String query = "UPDATE buyers SET fname=?, lname=?, email=?, password=? WHERE buyerId=?"; 
+			PreparedStatement preparedStmt = con.prepareStatement(query); 
+			
+			// binding values
+			preparedStmt.setString(1, fname); 
+			preparedStmt.setString(2, lname); 
+			preparedStmt.setString(3, email); 
+			preparedStmt.setString(4, password); 
+			preparedStmt.setInt(5, Integer.parseInt(buyerId)); 
+			
+			// execute the statement
+			preparedStmt.execute(); 
+			con.close(); 
+			
+			output = "Updated successfully"; 
+		 } catch (Exception e) { 
+			 output = "Error while updating the item."; 
+			 System.err.println(e.getMessage()); 
+		 }
+		 
+		 return output; 
+	}
 }
