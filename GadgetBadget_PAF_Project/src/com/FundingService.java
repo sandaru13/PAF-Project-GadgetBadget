@@ -23,23 +23,25 @@ public class FundingService {
 	@Path("/") 
 	@Produces(MediaType.TEXT_HTML) 
 	
-	public String readItems() 
+	public String readDonations() 
 	 { 
 		return fundingObj.readDonations();
 	 }
 
+	//Insertion
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	@Produces(MediaType.TEXT_PLAIN)
 	
-	public String insertDonations(@FormParam("name") String name, @FormParam("email") String email, @FormParam("amount") String amount, @FormParam("cardNo") String cardNo, @FormParam("cvv") String cvv, @FormParam("comments") String comments)
+	public String insertDonations(@FormParam("name") String name, @FormParam("email") String email, @FormParam("amount") String amount, @FormParam("cardNo") String cardNo, @FormParam("expd") String expd, @FormParam("cvv") String cvv, @FormParam("comments") String comments)
 	{
-		String output = fundingObj.insertDonations(name, email, amount, cardNo, cvv, comments);
+		String output = fundingObj.insertDonations(name, email, amount, cardNo, expd, cvv, comments);
 		return output;
 	}
 
 	
+	//Updation
 	@PUT
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -56,13 +58,15 @@ public class FundingService {
 		String email = fundObject.get("email").getAsString();
 		String amount = fundObject.get("amount").getAsString();
 		String cardNo = fundObject.get("cardNo").getAsString();
+		String expd = fundObject.get("expd").getAsString();
 		String cvv = fundObject.get("cvv").getAsString();
 		String comments = fundObject.get("comments").getAsString();
-		String output = fundingObj.updateDonation(innovID, name, email, amount, cardNo, cvv, comments);
+		String output = fundingObj.updateDonation(innovID, name, email, amount, cardNo, expd, cvv, comments);
 		return output;
 	}
 
 	
+	//Deletion
 	@DELETE
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_XML)

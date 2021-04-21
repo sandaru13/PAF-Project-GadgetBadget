@@ -26,32 +26,34 @@ public class Funders {
 	 } 
 	
 	
-	public String insertDonations(String name, String email, String amount, String cardNo, String cvv, String comments) 
+	public String insertDonations(String yourname, String emailAdrs, String damount, String cardNum, String exp, String cvvNo, String yourComment) 
 	 { 
+		Connection con = connect();
 		String output = ""; 
 		
 			try
 			{ 
-				 Connection con = connect(); 
 				 if (con == null) 
 				 {
 					 return "Error while connecting to the database for inserting."; 
 					 } 
 				 // create a prepared statement
-				 String query = " insert into donation (`innovID`,`name`,`email`,`amount`,`cardNo`,`cvv`,`comments`)" + " values (?, ?, ?, ?, ?, ?)"; 
+				 String query = " insert into donation (`innovID`,`name`,`email`,`amount`,`cardNo`,`expd`, `cvv`,`comments`)" + " values (?, ?, ?, ?, ?, ?, ?,?)"; 
 				 PreparedStatement preparedStmt = con.prepareStatement(query); 
 				 // binding values
 				 preparedStmt.setInt(1, 0); 
-				 preparedStmt.setString(2, name); 
-				 preparedStmt.setString(3, email); 
-				 preparedStmt.setInt(4, Integer.parseInt(amount)); 
-				 preparedStmt.setInt(5, Integer.parseInt(cardNo));
-				 preparedStmt.setInt(6, Integer.parseInt(cvv));
-				 preparedStmt.setString(7, comments);
+				 preparedStmt.setString(2, yourname); 
+				 preparedStmt.setString(3, emailAdrs); 
+				 preparedStmt.setInt(4, Integer.parseInt(damount)); 
+				 preparedStmt.setInt(5, Integer.parseInt(cardNum));
+				 preparedStmt.setString(6, exp);
+				 preparedStmt.setInt(7, Integer.parseInt(cvvNo));
+				 preparedStmt.setString(8, yourComment);
 			
 				 
 				 preparedStmt.execute(); 
 				 con.close(); 
+				 System.out.println(query);
 				 output = "Inserted successfully"; 
 			 } 
 			 catch (Exception e) 
@@ -75,18 +77,18 @@ public class Funders {
 					 } 
 				
 					 // Prepare the html table to be displayed
-				 output = "<table border='1'><tr>" + 
-						 "<th>Name</th>" + 
-						 "<th>Email</th>" + 
-						 "<th>Donation Amount</th>" +
-						 "<th>Card Number</th>" + 
-						 "<th>CVV</th>" + 
-						 "<th>Comments</th>" + 
-						 "<th>Update</th><th>Remove</th></tr>"; 
+				 output = "<table border='1'><tr><th>Name</th><th>Email</th>"+
+						 "<th>Donation Amount</th>"+
+						 "<th>Card Number</th>"+
+						  "<th>Exp Date on card</th>"+
+						  "<th>CVV</th>" +
+						 "<th>Comments</th>"+
+						  "<th>Update</th><th>Remove</th></tr>"; 
+				  
 				 
 				 String query = "select * from donation"; 
-				 Statement stmt = (Statement)con.createStatement(); 
-				 ResultSet rs = ((java.sql.Statement)stmt).executeQuery(query); 
+				 Statement stmt = (Statement) con.createStatement(); 
+				 ResultSet rs = ((java.sql.Statement) stmt).executeQuery(query); 
 				 // iterate through the rows in the result set
 					 
 				 while (rs.next()) 
@@ -96,6 +98,7 @@ public class Funders {
 					 String email = rs.getString("email"); 
 					 String amount = Integer.toString(rs.getInt("amount")); 
 					 String cardNo = Integer.toString(rs.getInt("cardNo")); 
+					 String expd = rs.getString("expd");
 					 String cvv = Integer.toString(rs.getInt("cvv")); 
 					 String comments = rs.getString("comments");
 					 
@@ -103,15 +106,17 @@ public class Funders {
 					 output += "<tr><td>" + name + "</td>"; 
 					 output += "<td>" + email + "</td>";
 					 output += "<td>" + amount + "</td>"; 
-					 output += "<tr><td>" + cardNo + "</td>"; 
-					 output += "<tr><td>" + cvv + "</td>";
-					 output += "<tr><td>" + comments + "</td>"; 
+					 output += "<td>" + cardNo + "</td>"; 
+					 output += "<td>" + expd + "</td>";
+					 output += "<td>" + cvv + "</td>";
+					 output += "<td>" + comments + "</td>"; 
 				
 					 // buttons
-					 output += "<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
-							 	+ "<td><form method='post' action='donation.jsp'>"
-							    + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
-							    + "<input name='itemID' type='hidden' value='" + innovID + "'>" + "</form></td></tr>"; 
+					 output +="<td><input name='btnUpdate' type='button' value='Update' onclick =  class='btn btn-secondary'></td>"
+							 + "<td><form method='post' action= 'updatePayment.jsp'>"
+							 + "<input name='btnRemove' type='submit' value='Delete' class='btn btn-danger'>"
+							 + "<input name='innovationID' type='hidden' value='" + innovID + "'>" 
+							 + "</form></td></tr>"; 
 					 } 
 				 con.close(); 
 				 // Complete the html table
@@ -127,7 +132,7 @@ public class Funders {
 	 } 
 	
 	
-	public String updateDonation(String ID, String name, String email, String amount, String cardNo, String cvv, String comments) 
+	public String updateDonation(String ID, String yourname, String emailAdrs, String damount, String cardNum, String exp, String cvvNo, String yourComment)
 	
 	{ 
 		 String output = ""; 
@@ -140,16 +145,17 @@ public class Funders {
 							 
 						 } 
 						 // create a prepared statement
-						 String query = "UPDATE donation SET name=?,email=?,amount=?,cardNo=?,cvv=?,comments=? WHERE innovID=?"; 
+						 String query = "UPDATE donation SET name=?,email=?,amount=?,cardNo=?,expd=?,cvv=?,comments=? WHERE innovID=?"; 
 						 PreparedStatement preparedStmt = con.prepareStatement(query); 
 						 // binding values
-						 preparedStmt.setString(1, name); 
-						 preparedStmt.setString(2, email);
-						 preparedStmt.setString(3, amount); 
-						 preparedStmt.setString(4, cardNo);
-						 preparedStmt.setString(5, cvv); 
-						 preparedStmt.setString(6, comments); 
-						 preparedStmt.setInt(7, Integer.parseInt(ID)); 
+						 preparedStmt.setString(1, yourname); 
+						 preparedStmt.setString(2, emailAdrs);
+						 preparedStmt.setInt(3, Integer.parseInt(damount)); 
+						 preparedStmt.setInt(4, Integer.parseInt(cardNum));
+						 preparedStmt.setString(5, exp);
+						 preparedStmt.setInt(6, Integer.parseInt(cvvNo)); 
+						 preparedStmt.setString(7, yourComment); 
+						 preparedStmt.setInt(8, Integer.parseInt(ID)); 
 						
 						 // execute the statement
 						 preparedStmt.execute(); 
@@ -198,5 +204,7 @@ public class Funders {
 			 } 
 		 return output; 
 		 } 
+
+
 	
 }
