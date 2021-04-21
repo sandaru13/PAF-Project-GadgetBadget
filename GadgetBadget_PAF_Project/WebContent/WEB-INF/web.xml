@@ -21,6 +21,7 @@
  	<url-pattern>/AdminService/*</url-pattern>
  	<url-pattern>/InnovatorService/*</url-pattern>
  	<url-pattern>/PaymentService/*</url-pattern>
+ 	<url-pattern>/FundingService/*</url-pattern>
   </servlet-mapping>
   
 </web-app>

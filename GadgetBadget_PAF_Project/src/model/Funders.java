@@ -16,7 +16,7 @@ public class Funders {
 				 Class.forName("com.mysql.jdbc.Driver"); 
 			 
 				 //Provide the correct details: DBServer/DBName, userName, password 
-				 con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/paf_db?useTimezone=true&serverTimezone=UTC", "root", "mysql80");
+				 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/paf_db", "root", "");
 			 } 
 			 catch (Exception e) 
 			 {
