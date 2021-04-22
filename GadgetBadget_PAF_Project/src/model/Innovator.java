@@ -5,12 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-
 
 public class Innovator {
 	
 	Date date = new Date();
+	java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 	
 	private Connection connect() 
 	 { 
@@ -41,12 +43,18 @@ public class Innovator {
 	 
 	 // Prepare the html table to be displayed
 	 
-	 output = "<table border='1'><tr><th>pId</th><th>Title</th>" +
-	 "<th>Category</th>" + 
-	 "<th>Description</th>" +
-	 "<th>Managed By</th>" +
-	 "<th>Remove</th></tr>"; 
-	 
+	 output = "<table border='1'><tr><th>pId</th>"+ 
+	         "<th>Title</th>" +
+			 "<th>Category</th>" + 
+			 "<th>Description</th>" +
+			 "<th>Managed By</th>" +
+			 "<th>Target Amount</th>" +
+			 "<th>Share Percentage(%)</th>" +
+			 "<th>Created Date</th>" +
+			 "<th>DeadLine</th>" +
+			 "<th>Verification</th>" +
+			 "<th>Remove</th></tr>"; 
+			 
 	 String query = "select * from innovator_projects"; 
 	 Statement stmt = con.createStatement(); 
 	 ResultSet rs = stmt.executeQuery(query); 
@@ -97,7 +105,7 @@ public class Innovator {
 	 } 
 	
 	//insert items
-	public String insertItem(String Title, String Catogery, String Description, String ManageBy,float share,float Amount,Date DeadLine) 
+	public String insertItem(String Title, String Category, String Description, String ManageBy,float share,float Amount,String deadLine) 
 	 { 
 	 String output = ""; 
 	 try
@@ -106,19 +114,22 @@ public class Innovator {
 	 if (con == null) 
 	 {return "Error while connecting to the database for inserting."; } 
 	 // create a prepared statement
-	 String query = " insert into innovator_projects('pId','Title','Category','Description','ManageBy','Amount','SharePrecentage','CreateDate','DeadLine','Verification')"
-				+ " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	 PreparedStatement preparedStmt = con.prepareStatement(query); 
+	 String query = " insert into innovator_projects (`pId`,`Title`,`Category`,`Description`,`ManageBy`,`Amount`,`SharePercentage`,`CreateDate`,`Deadline`,`Verification`)"  
+	    + " values (?, ?, ?, ?, ?,?, ?, ?, ?, ?)";
+	 
+
+	 PreparedStatement preparedStmt = con.prepareStatement(query);  
+	 
 	 // binding values
 	 preparedStmt.setInt(1, 0); 
 	 preparedStmt.setString(2, Title); 
-	 preparedStmt.setString(3, Catogery); 
+	 preparedStmt.setString(3, Category); 
 	 preparedStmt.setString(4, Description); 
 	 preparedStmt.setString(5, ManageBy); 
 	 preparedStmt.setFloat(6, Amount);
 	 preparedStmt.setFloat(7, share); 
-	 preparedStmt.setDate(8, (java.sql.Date) date); 
-	 preparedStmt.setDate(9, (java.sql.Date) DeadLine); 
+	 preparedStmt.setDate(8, sqlDate); 
+	 preparedStmt.setDate(9, java.sql.Date.valueOf(deadLine));
 	 preparedStmt.setBoolean(10, false);
 	// execute the statement
 	 preparedStmt.execute(); 
@@ -132,7 +143,6 @@ public class Innovator {
 	 } 
 	 return output; 
 	 } 
-	
 	
 	//update method
 	
@@ -180,7 +190,7 @@ public class Innovator {
 
 	
 		//delete method
-		public String deletePayment(String PaymentID) {
+		public String deleteInnv(String innvID) {
 			String output = "";
 	
 			try {
@@ -195,7 +205,7 @@ public class Innovator {
 				PreparedStatement preparedStmt = con.prepareStatement(query);
 	
 				// binding values
-				preparedStmt.setInt(1, Integer.parseInt(PaymentID));
+				preparedStmt.setInt(1, Integer.parseInt(innvID));
 	
 				// execute the statement
 				preparedStmt.execute();
@@ -266,13 +276,14 @@ public class Innovator {
 		 
 		 // Prepare the html table to be displayed
 		 
-		 output = "<table border='1'><tr><th>pId</th><th>Id</th>" +
+		 output = "<table border='1'><tr><th>Id</th>" +
 		 "<th>Nationality</th>" + 
 		 "<th>Passport_Id</th>" +
 		 "<th>BankName</th>" +
 		 "<th>AccountNo</th>" +
 		 "<th>Address</th>" +
-		 "<th>Contact</th></tr>"; 
+		 "<th>Contact</th>"+
+		 "<th>Action</th></tr>"; 
 		 
 		 String query = "select * from projects_verification"; 
 		 Statement stmt = con.createStatement(); 

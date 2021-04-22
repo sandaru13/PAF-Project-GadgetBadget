@@ -33,17 +33,19 @@ public class InnovatorService {
 		return innvObj.readItems();
 	 } 
 	
-	//insert projects ddetails
+	//insert projects details
 	
 	@POST
 	@Path("/form1") 
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN)
 	
-	public String insertItem( @FormParam("campTitle") String Title, @FormParam("category") String Category,  @FormParam("projectDetails") String Description ,
-			@FormParam("manage") String ManageBy,@FormParam("dvReward") float share , @FormParam("minGoal") float Amount, @FormParam("deadline") Date DeadLine) 
+	public String insertItem( @FormParam("campTitle") String campTitle, @FormParam("category") String category, 
+			@FormParam("projectDetails") String projectDetails,
+			@FormParam("manage") String manage,@FormParam("dvReward") float dvReward , @FormParam("minGoal") float minGoal, 
+			@FormParam("deadLine") String deadLine)
 	{ 
-	String output = innvObj.insertItem(Title, Category,Description,ManageBy,share,Amount,DeadLine); 
+	String output = innvObj.insertItem(campTitle, category,projectDetails,manage,dvReward,minGoal,deadLine); 
 	return output; 
 	}
 	
@@ -91,7 +93,7 @@ public class InnovatorService {
 	 Document docu = Jsoup.parse(form1Data, "", Parser.xmlParser()); 
 	 
 	 String pId = docu.select("pId").text(); 
-	 String output = innvObj.deletePayment(pId); 
+	 String output = innvObj.deleteInnv(pId); 
 	
 	 return output; 
 	}

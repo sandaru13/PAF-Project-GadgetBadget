@@ -43,6 +43,7 @@
 				  <div class="card" style="width:500px;margin-left:290px;" >
 				
 					<form style="margin:30px 30px 30px 30px;" method="POST" action="InnovatorService/Innovator/form1">
+					
 					    Campaign Title
 					    <input type="text" class="form-control" name="campTitle" id ="campTitle"  placeholder="yo...">
 					    <br>  
@@ -108,7 +109,7 @@
 						<br>
 						
 						Deadline 
-						<input type="date" class="form-control" name="deadline" id="deadline" required><br>
+						<input type="date" class="form-control" name="deadLine" id="deadLine" required><br>
 					    
 					    <input type="checkbox" id="AgreementP1" name="Agreement" id="Agreement" value="AgreementP1" required>
 					    <label for="AgreementP1">Terms and Conditions</label><br>
