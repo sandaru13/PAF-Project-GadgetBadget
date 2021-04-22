@@ -67,11 +67,24 @@ public class AdminService {
 	}
 	
 	@POST
-	@Path("/SignUp")
+	@Path("/SignUpInnovator")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN)
-	public String insertAccount(@FormParam("type") String type, @FormParam("signFname") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
-		String output = adminObj.insertAccount(type, fname, lname, email, password); 
+	public String insertAccountInnovator(@FormParam("signFname") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
+		
+		String output = adminObj.insertAccountInnovator(fname, lname, email, password); 
+		
+		return output; 
+	}
+	
+	@POST
+	@Path("/SignUpBuyer")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
+	@Produces(MediaType.TEXT_PLAIN)
+	public String insertAccountBuyer(@FormParam("signFname") String fname, @FormParam("signLname") String lname, @FormParam("signEmail") String email, @FormParam("signPW") String password) { 
+		
+		String output = adminObj.insertAccountBuyer(fname, lname, email, password); 
+		
 		return output; 
 	}
 	
@@ -107,14 +120,14 @@ public class AdminService {
 		JsonObject adObj2 = new JsonParser().parse(BuyerData).getAsJsonObject(); 
 	
 		//Read the values from the JSON object
-		String innId = adObj2.get("innId").getAsString(); 
 		String fname = adObj2.get("fname").getAsString(); 
 		String lname = adObj2.get("lname").getAsString(); 
 		String email = adObj2.get("email").getAsString(); 
 		String password = adObj2.get("password").getAsString(); 
+		String innId = adObj2.get("buyerId").getAsString(); 
  
 		
-		String output = adminObj2.updateBuyer(innId, fname, lname, email, password); 
+		String output = adminObj2.updateBuyer(fname, lname, email, password, innId); 
 	
 		return output; 
 	}
