@@ -70,7 +70,7 @@ public class Innovator {
 	 Float proAmount = rs.getFloat("Amount"); 
 	 Float share = rs.getFloat("SharePercentage"); //default is 0
 	 Date creDate = rs.getDate("CreateDate");//current date
-	 Date deadLine = rs.getDate("DeadLine");
+	 String deadLine = rs.getString("DeadLine");
 	 Boolean verification  = rs.getBoolean("Verification");//default is FALSE
 	 
 	 // Add into the html table
@@ -129,7 +129,7 @@ public class Innovator {
 	 preparedStmt.setFloat(6, Amount);
 	 preparedStmt.setFloat(7, share); 
 	 preparedStmt.setDate(8, sqlDate); 
-	 preparedStmt.setDate(9, java.sql.Date.valueOf(deadLine));
+	 preparedStmt.setString(9, deadLine);
 	 preparedStmt.setBoolean(10, false);
 	// execute the statement
 	 preparedStmt.execute(); 
@@ -146,7 +146,7 @@ public class Innovator {
 	
 	//update method
 	
-	public String updatePayment(String Title, String Catogery, String Description, String ManageBy,String share,String Amount,Date DeadLine,String pId)
+	public String updatePayment(String Title, String Category, String Description, String ManageBy,String Share,String Amount,String DeadLine,String pId)
 	{ 
 		 String output = ""; 
 		 try
@@ -158,18 +158,18 @@ public class Innovator {
 			 
 		 } 
 		 // create a prepared statement
-		 String query = "UPDATE innovator_projects SET Title=?,Catogery=?,Description=?,ManageBy=?,SharePrecentage=?, Amount=?,DeadLine=? WHERE pId=? ";
+		 String query = "UPDATE innovator_projects SET Title=?,Category=?,Description=?,ManageBy=?,SharePercentage=?, Amount=?, DeadLine=? WHERE pId=? ";
 			
 		 PreparedStatement preparedStmt = con.prepareStatement(query);
 		 
 		 // binding values
 		 preparedStmt.setString(1, Title); 
-		 preparedStmt.setString(2, Catogery); 
+		 preparedStmt.setString(2, Category); 
 		 preparedStmt.setString(3, Description); 
 		 preparedStmt.setString(4, ManageBy); 
-		 preparedStmt.setFloat(5, Float.parseFloat(share)); 
-		 preparedStmt.setFloat(6, Float.parseFloat(Amount)); 
-		 preparedStmt.setDate(7, (java.sql.Date) DeadLine); 
+		 preparedStmt.setFloat(5, Float.parseFloat(Share)); 
+		 preparedStmt.setFloat(6, Float.parseFloat(Amount));
+		 preparedStmt.setString(7, DeadLine); 
 		 preparedStmt.setInt(8, Integer.parseInt(pId)); 
 	
 		 

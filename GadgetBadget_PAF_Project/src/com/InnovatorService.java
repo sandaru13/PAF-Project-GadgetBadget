@@ -58,26 +58,23 @@ public class InnovatorService {
 	@Produces(MediaType.TEXT_PLAIN) 
 	public String updatePayment(String form1Data) 
 	{ 
+		
 	//Convert form data  to a JSON object 
+		
 	 JsonObject innvObj2 = new JsonParser().parse(form1Data).getAsJsonObject(); 
+	 
 	//Read the values from the JSON object
+	 
 	 String Title = innvObj2.get("Title").getAsString(); 
 	 String Category = innvObj2.get("Category").getAsString(); 
 	 String Description = innvObj2.get("Description").getAsString();
 	 String ManageBy = innvObj2.get("ManageBy").getAsString(); 
-	 String Share = innvObj2.get("SharePrecentage").getAsString();
+	 String Share = innvObj2.get("SharePercentage").getAsString();
 	 String Amount = innvObj2.get("Amount").getAsString(); 
-	 String Date = innvObj2.get("Deadline").getAsString();
-	 Date Deadline = null;
-		try {
-			Deadline = new SimpleDateFormat("dd/MM/yyyy").parse(Date);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+	 String Deadline = innvObj2.get("Deadline").getAsString(); 
 	 String pId = innvObj2.get("pId").getAsString(); 
 	 
-	 String out = innvObj.updatePayment( Title, Category, Description, ManageBy, Share, Amount, Deadline, pId);
+	 String out = innvObj.updatePayment( Title, Category, Description, ManageBy, Share, Amount,Deadline, pId);
 	 return out;
 	}
 	
