@@ -45,7 +45,7 @@ public class Funders {
 				 preparedStmt.setString(2, yourname); 
 				 preparedStmt.setString(3, emailAdrs); 
 				 preparedStmt.setInt(4, Integer.parseInt(damount)); 
-				 preparedStmt.setInt(5, Integer.parseInt(cardNum));
+				 preparedStmt.setLong(5, Long.parseLong(cardNum));
 				 preparedStmt.setString(6, exp);
 				 preparedStmt.setInt(7, Integer.parseInt(cvvNo));
 				 preparedStmt.setString(8, yourComment);
@@ -55,7 +55,7 @@ public class Funders {
 				 con.close(); 
 				 System.out.println(query);
 				 output = "Thank You!"
-				 		+ "We have successfully received your donation."; 
+				 		+ " We have successfully received your donation."; 
 			 } 
 			 catch (Exception e) 
 			 { 
@@ -98,7 +98,7 @@ public class Funders {
 					 String name = rs.getString("name"); 
 					 String email = rs.getString("email"); 
 					 String amount = Integer.toString(rs.getInt("amount")); 
-					 String cardNo = Integer.toString(rs.getInt("cardNo")); 
+					 String cardNo = Long.toString(rs.getLong("cardNo")); 
 					 String expd = rs.getString("expd");
 					 String cvv = Integer.toString(rs.getInt("cvv")); 
 					 String comments = rs.getString("comments");
@@ -113,7 +113,7 @@ public class Funders {
 					 output += "<td>" + comments + "</td>"; 
 				
 					 // buttons
-					 output +="<td><input name='btnUpdate' type='button' value='Update' onclick =  class='btn btn-secondary'></td>"
+					 output +="<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
 							 + "<td><form method='post' action= 'updateDonation.jsp'>"
 							 + "<input name='btnRemove' type='submit' value='Delete' class='btn btn-danger'>"
 							 + "<input name='innovationID' type='hidden' value='" + innovID + "'>" 
@@ -152,7 +152,7 @@ public class Funders {
 						 preparedStmt.setString(1, yourname); 
 						 preparedStmt.setString(2, emailAdrs);
 						 preparedStmt.setInt(3, Integer.parseInt(damount)); 
-						 preparedStmt.setInt(4, Integer.parseInt(cardNum));
+						 preparedStmt.setLong(4, Long.parseLong(cardNum));
 						 preparedStmt.setString(5, exp);
 						 preparedStmt.setInt(6, Integer.parseInt(cvvNo)); 
 						 preparedStmt.setString(7, yourComment); 
@@ -195,7 +195,7 @@ public class Funders {
 						 // execute the statement
 						 preparedStmt.execute(); 
 						 con.close(); 
-						 output = "Your donation has been deleted."; 
+						 output = "Your donation has been Deleted."; 
 				 } 
 		 
 			catch (Exception e) 
