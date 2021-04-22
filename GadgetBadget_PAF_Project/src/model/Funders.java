@@ -44,7 +44,7 @@ public class Funders {
 				 preparedStmt.setInt(1, 0); 
 				 preparedStmt.setString(2, yourname); 
 				 preparedStmt.setString(3, emailAdrs); 
-				 preparedStmt.setInt(4, Integer.parseInt(damount)); 
+				 preparedStmt.setDouble(4, Double.parseDouble(damount)); 
 				 preparedStmt.setLong(5, Long.parseLong(cardNum));
 				 preparedStmt.setString(6, exp);
 				 preparedStmt.setInt(7, Integer.parseInt(cvvNo));
@@ -97,7 +97,7 @@ public class Funders {
 					 String innovID = Integer.toString(rs.getInt("innovID")); 
 					 String name = rs.getString("name"); 
 					 String email = rs.getString("email"); 
-					 String amount = Integer.toString(rs.getInt("amount")); 
+					 String amount = Double.toString(rs.getDouble("amount")); 
 					 String cardNo = Long.toString(rs.getLong("cardNo")); 
 					 String expd = rs.getString("expd");
 					 String cvv = Integer.toString(rs.getInt("cvv")); 
@@ -151,7 +151,7 @@ public class Funders {
 						 // binding values
 						 preparedStmt.setString(1, yourname); 
 						 preparedStmt.setString(2, emailAdrs);
-						 preparedStmt.setInt(3, Integer.parseInt(damount)); 
+						 preparedStmt.setDouble(3, Double.parseDouble(damount)); 
 						 preparedStmt.setLong(4, Long.parseLong(cardNum));
 						 preparedStmt.setString(5, exp);
 						 preparedStmt.setInt(6, Integer.parseInt(cvvNo)); 
