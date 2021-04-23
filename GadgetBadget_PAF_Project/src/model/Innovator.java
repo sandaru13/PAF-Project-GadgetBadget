@@ -29,6 +29,8 @@ public class Innovator {
 	 return con; 
 	 } 
 	
+	// read innovator project details --+
+	
 	public String readItems() 
 	 {
 		
@@ -104,8 +106,9 @@ public class Innovator {
 	 return output; 
 	 } 
 	
-	//insert items
-	public String insertItem(String Title, String Category, String Description, String ManageBy,float share,float Amount,String deadLine) 
+	//insert innovator projects details --+
+	
+	public String insertInnvProjects(String Title, String Category, String Description, String ManageBy,float share,float Amount,String deadLine) 
 	 { 
 	 String output = ""; 
 	 try
@@ -144,9 +147,9 @@ public class Innovator {
 	 return output; 
 	 } 
 	
-	//update method
+	//update method innovator projects --+
 	
-	public String updatePayment(String Title, String Category, String Description, String ManageBy,String Share,String Amount,String DeadLine,String pId)
+	public String updateInnvDet(String Title, String Category, String Description, String ManageBy,String Share,String Amount,String DeadLine,String pId)
 	{ 
 		 String output = ""; 
 		 try
@@ -189,7 +192,8 @@ public class Innovator {
 		 }
 
 	
-		//delete method
+		//delete method for innovator projects --+
+	
 		public String deleteInnv(String innvID) {
 			String output = "";
 	
@@ -221,8 +225,9 @@ public class Innovator {
 			return output;
 		}
 		
-		//Verification update method, done by admin //to verify change symbol to 0->1
-		public String verificationTick(String pId, String symbol) {	
+		//Verification update method, done by admin //to verify change symbol to 0->1 --+
+		
+		public String verificationTick(String symbol, String pId) {	
 			
 				 String output = ""; 
 				 try
@@ -260,9 +265,11 @@ public class Innovator {
 		}
 		
 		
-		//Innovator Financial details Section
+		//Innovator Financial details Section -----------------------
 		
-		public String readItemsFin() 
+		//read innovator financial details --+
+		
+		public String readProFinDet() 
 		 {
 			
 		 String output = ""; 
@@ -329,9 +336,9 @@ public class Innovator {
 		 } 
 		
 		
-		 //Innovator financial details insert function
+		 //Innovator financial details insert function --+
 		
-		public String insertFinDet(String nationality, String passport, String bank, Integer accNumber,String address, Integer contact) {
+		public String insertFinDet(String nationality, String getPass, String getbank, Integer bankNumber,String address, Integer contacNumber,Integer foreignKey) {
 			
 			 String output = ""; 
 			 try
@@ -340,17 +347,17 @@ public class Innovator {
 			 if (con == null) 
 			 {return "Error while connecting to the database for inserting."; } 
 			 // create a prepared statement
-			 String query = " insert into projects_verification('Id','Nationality','Passport_Id','BankName','AccountNo','Address','Contact')"
+			 String query = " insert into projects_verification (`Id`,`Nationality`,`Passport_Id`,`BankName`,`AccountNo`,`Address`,`Contact`)"
 						+ " values (?, ?, ?, ?, ?, ?, ?)";
 			 PreparedStatement preparedStmt = con.prepareStatement(query); 
 			 // binding values
-			 preparedStmt.setInt(1, 0); 
+			 preparedStmt.setInt(1, foreignKey); 
 			 preparedStmt.setString(2, nationality); 
-			 preparedStmt.setString(3, passport); 
-			 preparedStmt.setString(4,  bank); 
-			 preparedStmt.setInt(5, accNumber); 
+			 preparedStmt.setString(3, getPass); 
+			 preparedStmt.setString(4,  getbank); 
+			 preparedStmt.setInt(5, bankNumber); 
 			 preparedStmt.setString(6, address);
-			 preparedStmt.setInt(5, contact); 
+			 preparedStmt.setInt(7, contacNumber); 
 			// execute the statement
 			 preparedStmt.execute(); 
 			 con.close(); 
@@ -363,6 +370,84 @@ public class Innovator {
 			 } 
 			 return output; 
 			
+		}
+			
+		
+		//update innovator financial details --+
+			
+		public String updateInnvFinDet(String Nationality, String Passport_Id, String BankName, String AccountNo,String Address,String Contact,String Id)
+		{ 
+			 String output = ""; 
+			 try
+			 { 
+			 Connection con = connect(); 
+			 if (con == null) 
+			 {
+				 return "Error while connecting to the database for updating."; 
+				 
+			 } 
+			 // create a prepared statement
+			 String query = "UPDATE projects_verification SET Nationality=?,Passport_Id=?,BankName=?,AccountNo=?,Address=?, Contact=?  WHERE Id=? ";
+				
+			 PreparedStatement preparedStmt = con.prepareStatement(query);
+			 
+			 // binding values
+			 preparedStmt.setString(1, Nationality); 
+			 preparedStmt.setString(2, Passport_Id); 
+			 preparedStmt.setString(3, BankName); 
+			 preparedStmt.setInt(4, Integer.parseInt(AccountNo)); 
+			 preparedStmt.setString(5, Address); 
+			 preparedStmt.setInt(6, Integer.parseInt(Contact));
+			 preparedStmt.setInt(7, Integer.parseInt(Id)); 
+		
+			 
+			 // execute the statement
+			 preparedStmt.execute(); 
+			 con.close(); 
+			 output = "Innovator Financial Details Updated successfully"; 
+			 } 
+			 
+			 catch (Exception e) 
+			 { 
+			     output = "Error while updating the innovatorFinancial details."; 
+			     System.err.println(e.getMessage()); 
+			 } 
+			 
+			 return output; 
+			 }
+				
+		
+		//update innovator financial details --+
+		
+		public String deleteInnvFinDet(String Id) {
+			String output = "";
+	
+			try {
+				Connection con = connect();
+	
+				if (con == null) {
+					return "Error while connecting to the database for deleting.";
+				}
+	
+				// create a prepared statement
+				String query = "delete from projects_verification where Id=?";
+				PreparedStatement preparedStmt = con.prepareStatement(query);
+	
+				// binding values
+				preparedStmt.setInt(1, Integer.parseInt(Id));
+	
+				// execute the statement
+				preparedStmt.execute();
+				con.close();
+	
+				output = "Innovator Financial details Deleted successfully";
+	
+			} catch (Exception e) {
+				output = "Error while deleting innovator Financial details.";
+				System.err.println(e.getMessage());
+			}
+	
+			return output;
 		}
 	
 }

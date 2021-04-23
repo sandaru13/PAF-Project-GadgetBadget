@@ -40,12 +40,12 @@ public class InnovatorService {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN)
 	
-	public String insertItem( @FormParam("campTitle") String campTitle, @FormParam("category") String category, 
+	public String insertInnv( @FormParam("campTitle") String campTitle, @FormParam("category") String category, 
 			@FormParam("projectDetails") String projectDetails,
 			@FormParam("manage") String manage,@FormParam("dvReward") float dvReward , @FormParam("minGoal") float minGoal, 
 			@FormParam("deadLine") String deadLine)
 	{ 
-	String output = innvObj.insertItem(campTitle, category,projectDetails,manage,dvReward,minGoal,deadLine); 
+	String output = innvObj.insertInnvProjects(campTitle, category,projectDetails,manage,dvReward,minGoal,deadLine); 
 	return output; 
 	}
 	
@@ -56,7 +56,7 @@ public class InnovatorService {
 	@Path("/updateInnv") 
 	@Consumes(MediaType.APPLICATION_JSON) 
 	@Produces(MediaType.TEXT_PLAIN) 
-	public String updatePayment(String form1Data) 
+	public String updateInnv(String form1Data) 
 	{ 
 		
 	//Convert form data  to a JSON object 
@@ -74,7 +74,7 @@ public class InnovatorService {
 	 String Deadline = innvObj2.get("Deadline").getAsString(); 
 	 String pId = innvObj2.get("pId").getAsString(); 
 	 
-	 String out = innvObj.updatePayment( Title, Category, Description, ManageBy, Share, Amount,Deadline, pId);
+	 String out = innvObj.updateInnvDet( Title, Category, Description, ManageBy, Share, Amount,Deadline, pId);
 	 return out;
 	}
 	
@@ -84,7 +84,7 @@ public class InnovatorService {
 	@Path("/deleteInnv") 
 	@Consumes(MediaType.APPLICATION_XML) 
 	@Produces(MediaType.TEXT_PLAIN) 
-	public String deletePayment(String form1Data) 
+	public String deleteInnv(String form1Data) 
 	{ 
 	//Convert to XML document
 	 Document docu = Jsoup.parse(form1Data, "", Parser.xmlParser()); 
@@ -109,18 +109,20 @@ public class InnovatorService {
 	 String symbol = innvObj3.get("Verification").getAsString(); 
 	 String pId = innvObj3.get("pId").getAsString(); 
 	 
-	 String out = innvObj.verificationTick(pId,symbol);
+	 String out = innvObj.verificationTick(symbol,pId);
 	 return out;
 	}
 	
-	//innovator financial details section
+	//innovator financial details section --------
+	
+	//read financial details
 	
 	@GET
 	@Path("/readInnvFin") 
 	@Produces(MediaType.TEXT_HTML) 
-	public String readItemsFin() 
+	public String readProFin() 
 	 { 
-		return innvObj.readItemsFin();
+		return innvObj.readProFinDet();
 	 } 
 		
 		//insert financial details
@@ -129,11 +131,56 @@ public class InnovatorService {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN)
 	
-	public String insertFinDetails( @FormParam("nationality") String nationality, @FormParam("getPass") String passport,  @FormParam("getbank") String bank ,
-			@FormParam("bankNumber") Integer accNumber,@FormParam("address") String adddress,@FormParam("contacNumber") Integer contact) 
+	public String insertFinDetails( @FormParam("nationality") String nationality, @FormParam("getPass") String getPass,  @FormParam("getbank") String getbank ,
+			@FormParam("bankNumber") Integer bankNumber,@FormParam("address") String address, @FormParam("contacNumber") Integer contacNumber,
+			@FormParam("foreignKey") Integer foreignKey ) 
 	{ 
-	String output = innvObj.insertFinDet(nationality,passport, bank, accNumber, adddress, contact); 
+	String output = innvObj.insertFinDet(nationality,getPass, getbank, bankNumber, address, contacNumber,foreignKey); 
 	return output; 
+	}
+	
+	//update financial details
+	
+	@PUT
+	@Path("/updateFin") 
+	@Consumes(MediaType.APPLICATION_JSON) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String updatFinDet(String form2Data) 
+	{ 
+		
+	//Convert form data  to a JSON object 
+		
+	 JsonObject innvObj3 = new JsonParser().parse(form2Data).getAsJsonObject(); 
+	 
+	//Read the values from the JSON object
+	 
+	 String Nationality = innvObj3.get("Nationality").getAsString(); 
+	 String Passport_Id = innvObj3.get("Passport_Id").getAsString(); 
+	 String BankName = innvObj3.get("BankName").getAsString();
+	 String AccountNo = innvObj3.get("AccountNo").getAsString(); 
+	 String Address = innvObj3.get("Address").getAsString();
+	 String Contact = innvObj3.get("Contact").getAsString(); 
+	 String Id = innvObj3.get("Id").getAsString(); 
+	 
+	 String out = innvObj.updateInnvFinDet( Nationality, Passport_Id, BankName, AccountNo, Address, Contact,Id);
+	 return out;
+	}
+	
+	//delete financial details
+	
+	@DELETE
+	@Path("/deleteInnvFin") 
+	@Consumes(MediaType.APPLICATION_XML) 
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String deleteInnvFin(String form3Data) 
+	{ 
+	//Convert to XML document
+	 Document docum = Jsoup.parse(form3Data, "", Parser.xmlParser()); 
+	 
+	 String Id = docum.select("Id").text(); 
+	 String output = innvObj.deleteInnvFinDet(Id); 
+	
+	 return output; 
 	}
 	
 }
