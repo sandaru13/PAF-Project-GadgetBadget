@@ -34,9 +34,9 @@ public class FundingService {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	@Produces(MediaType.TEXT_PLAIN)
 	
-	public String insertDonations(@FormParam("name") String name, @FormParam("email") String email, @FormParam("amount") String amount, @FormParam("cardNo") String cardNo, @FormParam("expd") String expd, @FormParam("cvv") String cvv, @FormParam("comments") String comments)
+	public String insertDonations(@FormParam("name") String name, @FormParam("email") String email, @FormParam("projectID") String projectID, @FormParam("amount") String amount, @FormParam("cardNo") String cardNo, @FormParam("expd") String expd, @FormParam("cvv") String cvv, @FormParam("comments") String comments)
 	{
-		String output = fundingObj.insertDonations(name, email, amount, cardNo, expd, cvv, comments);
+		String output = fundingObj.insertDonations(name, email, projectID, amount, cardNo, expd, cvv, comments);
 		return output;
 	}
 
@@ -53,15 +53,16 @@ public class FundingService {
 		JsonObject fundObject = new JsonParser().parse(donationData).getAsJsonObject();
 
 		// Read the values from the JSON object
-		String innovID = fundObject.get("innovID").getAsString();
+		String funderID = fundObject.get("funderID").getAsString();
 		String name = fundObject.get("name").getAsString();
 		String email = fundObject.get("email").getAsString();
+		String projectID = fundObject.get("projectID").getAsString();
 		String amount = fundObject.get("amount").getAsString();
 		String cardNo = fundObject.get("cardNo").getAsString();
 		String expd = fundObject.get("expd").getAsString();
 		String cvv = fundObject.get("cvv").getAsString();
 		String comments = fundObject.get("comments").getAsString();
-		String output = fundingObj.updateDonation(innovID, name, email, amount, cardNo, expd, cvv, comments);
+		String output = fundingObj.updateDonation(funderID, name, email, projectID, amount, cardNo, expd, cvv, comments);
 		return output;
 	}
 
@@ -77,8 +78,8 @@ public class FundingService {
 		Document doc = Jsoup.parse(donationData, "", Parser.xmlParser());
 
 		// Read the value from the element <innovationID>
-		String innovID = doc.select("innovID").text();
-		String output = fundingObj.deleteDonation(innovID);
+		String funderID = doc.select("funderID").text();
+		String output = fundingObj.deleteDonation(funderID);
 		return output;
 	}
 	
