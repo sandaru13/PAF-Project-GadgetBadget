@@ -113,7 +113,7 @@ public class Admin {
 				// Complete the html table
 				output += "</table>"; 
 		} catch (Exception e) { 
-			output = "Error while reading the items."; 
+			output = "Error while reading the details."; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
@@ -158,7 +158,7 @@ public class Admin {
 				// Complete the html table
 				output += "</table>"; 
 		} catch (Exception e) { 
-			output = "Error while reading the items."; 
+			output = "Error while reading the details."; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
@@ -203,7 +203,7 @@ public class Admin {
 				// Complete the html table
 				output += "</table>"; 
 		} catch (Exception e) { 
-			output = "Error while reading the items."; 
+			output = "Error while reading the details."; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
@@ -221,7 +221,7 @@ public class Admin {
 				return "Error while connecting to the database for reading."; } 
 	 
 				// Prepare the html table to be displayed
-				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Action</th>"; 
+				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Action</th>"; 
 				String query = "select * from innovators"; 
 				Statement stmt = con.createStatement(); 
 				ResultSet rs = stmt.executeQuery(query); 
@@ -233,14 +233,12 @@ public class Admin {
 					String fname = rs.getString("fname");
 					String lname = rs.getString("lname");
 					String email = rs.getString("email");
-					String password = rs.getString("password");
 					
 					// Add into the html table
 					output += "<tr><td>" + innID + "</td>"; 
 					output += "<td>" + fname + "</td>"; 
 					output += "<td>" + lname + "</td>"; 
 					output += "<td>" + email + "</td>";
-					output += "<td>" + password + "</td>";
 					
 					// buttons
 					output += "<td><form method='post' action='#'>" + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" + "<input name='innovatorID' type='hidden' value='" + innID + "'>" + "</form></td></tr>"; 
@@ -250,7 +248,7 @@ public class Admin {
 				// Complete the html table
 				output += "</table>"; 
 		} catch (Exception e) { 
-			output = "Error while reading the items."; 
+			output = "Error while reading the details."; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
@@ -268,7 +266,7 @@ public class Admin {
 				return "Error while connecting to the database for reading."; } 
 	 
 				// Prepare the html table to be displayed
-				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Action</th>"; 
+				output = "<table border='1'><tr><th>Innovator Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Action</th>"; 
 				String query = "select * from buyers"; 
 				Statement stmt = con.createStatement(); 
 				ResultSet rs = stmt.executeQuery(query); 
@@ -280,14 +278,12 @@ public class Admin {
 					String fname = rs.getString("fname");
 					String lname = rs.getString("lname");
 					String email = rs.getString("email");
-					String password = rs.getString("password");
 					
 					// Add into the html table
 					output += "<tr><td>" + buyerID + "</td>"; 
 					output += "<td>" + fname + "</td>"; 
 					output += "<td>" + lname + "</td>"; 
 					output += "<td>" + email + "</td>";
-					output += "<td>" + password + "</td>";
 					
 					// buttons
 					output += "<td><form method='post' action='#'>" + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>" + "<input name='buyerID' type='hidden' value='" + buyerID + "'>" + "</form></td></tr>"; 
@@ -297,7 +293,7 @@ public class Admin {
 				// Complete the html table
 				output += "</table>"; 
 		} catch (Exception e) { 
-			output = "Error while reading the items."; 
+			output = "Error while reading the details."; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
@@ -332,7 +328,7 @@ public class Admin {
 				con.close(); 
 				output = "Inserted successfully"; 
 		} catch (Exception e) { 
-			output = "Error while inserting the item."; 
+			output = "Error while inserting the details."; 
 			System.err.println(e.getMessage()); 
 		}
 		return output; 
@@ -367,7 +363,7 @@ public class Admin {
 					con.close(); 
 					output = "Inserted successfully"; 
 			} catch (Exception e) { 
-				output = "Error while inserting the item."; 
+				output = "Error while inserting the details."; 
 				System.err.println(e.getMessage()); 
 			}
 			return output; 
@@ -400,7 +396,7 @@ public class Admin {
 			
 			output = "Updated successfully"; 
 		 } catch (Exception e) { 
-			 output = "Error while updating the item."; 
+			 output = "Error while updating the details."; 
 			 System.err.println(e.getMessage()); 
 		 }
 		 return output; 
@@ -433,7 +429,7 @@ public class Admin {
 			
 			output = "Updated successfully"; 
 		 } catch (Exception e) { 
-			 output = "Error while updating the item."; 
+			 output = "Error while updating the details."; 
 			 System.err.println(e.getMessage()); 
 		 }
 		 return output; 
@@ -465,7 +461,7 @@ public class Admin {
 			output = "Innovator Account Deleted successfully";
 
 		} catch (Exception e) {
-			output = "Error while deleting the payment details.";
+			output = "Error while deleting the details.";
 			System.err.println(e.getMessage());
 		}
 		return output;
@@ -497,7 +493,7 @@ public class Admin {
 			output = "Buyer Account Deleted successfully";
 
 		} catch (Exception e) {
-			output = "Error while deleting the payment details.";
+			output = "Error while deleting the details.";
 			System.err.println(e.getMessage());
 		}
 		return output;
