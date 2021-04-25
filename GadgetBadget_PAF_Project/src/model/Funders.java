@@ -46,7 +46,7 @@ public class Funders {
 				 preparedStmt.setString(3, emailAdrs); 
 				 preparedStmt.setString(4, projID); 
 				 preparedStmt.setDouble(5, Double.parseDouble(damount)); 
-				 preparedStmt.setLong(6, Long.parseLong(cardNum));
+				 preparedStmt.setString(6, cardNum);
 				 preparedStmt.setString(7, exp);
 				 preparedStmt.setInt(8, Integer.parseInt(cvvNo));
 				 preparedStmt.setString(9, yourComment);
@@ -85,7 +85,7 @@ public class Funders {
 						 "<th> Card Number </th>"+
 						  "<th>Expiration Date on card </th>"+
 						  "<th> CVV Code </th>" +
-						 "<th> Comments</th>"+
+						 "<th> Comments (optional)</th>"+
 						  "<th>Update</th><th> Remove</th></tr>"; 
 				  
 				 
@@ -101,7 +101,7 @@ public class Funders {
 					 String email = rs.getString("email"); 
 					 String projectID = rs.getString("projectID"); 
 					 String amount = Double.toString(rs.getDouble("amount")); 
-					 String cardNo = Long.toString(rs.getLong("cardNo")); 
+					 String cardNo = rs.getString("cardNo"); 
 					 String expd = rs.getString("expd");
 					 String cvv = Integer.toString(rs.getInt("cvv")); 
 					 String comments = rs.getString("comments");
@@ -157,7 +157,7 @@ public class Funders {
 						 preparedStmt.setString(2, emailAdrs);
 						 preparedStmt.setString(3, projID);
 						 preparedStmt.setDouble(4, Double.parseDouble(damount)); 
-						 preparedStmt.setLong(5, Long.parseLong(cardNum));
+						 preparedStmt.setString(5, cardNum);
 						 preparedStmt.setString(6, exp);
 						 preparedStmt.setInt(7, Integer.parseInt(cvvNo)); 
 						 preparedStmt.setString(8, yourComment); 
